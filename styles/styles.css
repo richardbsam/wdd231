@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --main-bg-color: #ffffff;
+    --main-text-color: #2c3e50;
+    --header-bg-color: #005f33;
+    --header-text-color: #ffffff;
+    --nav-bg-color: #333333;
+    --nav-text-color: #ffffff;
+    --footer-bg-color: #005f33;
+    --footer-text-color: #ffffff;
+    --footer-highlight-color: #e5a00d; /* Darker yellow for better contrast */
+    --font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+  }
+  
+
+  
+
+/* mobile **************************/
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em; /* Space between img and h1 */
+    top: 0;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333333; 
+    width: 100%;
+    z-index: 1000; /* Ensure header is above other elements */
+  }
+
+.header-image {
+    width: 100px;
+    height: auto;
+    position: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333333; 
+  }
+  
+
+header h1 {
+    margin: 0;
+  }
+
+   
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+h1 {
+	font-size: 2rem;
+}
+
+header,nav, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+  
+  }
+  
+
+nav {
+	background-color: #333;
+}
+nav ul {
+	list-style-type: none;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration:overline;
+}
+
+.active {
+	color: yellow;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  
+    width: 100%;
+  }
+  
+footer p {
+    margin: 0;
+    color: var(--footer-highlight-color);
+  }
+  
+footer p span {
+    font-weight: lighter;
+  }
+
+
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+    .hamburger {
+        display: none; /* Initially hidden */
+      }
+}
