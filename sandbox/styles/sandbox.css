@@ -152,6 +152,12 @@ main {
   text-align: center;
 }
 
+.image-container {
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+
 footer {
   background-color: #333;
   color: white;
