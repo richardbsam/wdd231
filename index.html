@@ -6,7 +6,7 @@
     <title>WDD 231: Web Frontend Development 1 - Richard Sam</title>
     <meta name="description" content="WDD 231 - Web Frontend Development 1 | Richard Sam | Prerequisite course for Web and Computer Programming Certificate">
     <meta name="author" content="Richard Sam">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,25 +15,17 @@
 <body>
     <header>
         <img src="images/header.jpg" alt="Header Picture" class="header-image">
-        <h1>Richard Boniface Sam</h1>  
-
-
-        
-        <div class="hamburger" onclick="toggleNav()">
-            <span id="hamburgerIcon">&#9776;</span> <!-- Hamburger icon -->
-            <span id="closeIcon" class="hidden">&times;</span> <!-- Close icon -->
-        </div>  
+        <h1>Richard Boniface Sam</h1>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        </ul>
-    </nav>
-
+ 
+    <button id="menu"></button>
+        <nav class="navigation">
+            <a href="#" title="index.html" class="active">Home</a>
+            <a href="#" title="#">Chamber</a>
+            <a href="#" title="#">GitHub Profile</a>
+            <a href="#" title="#">linkedin</a>
+        </nav>
+        <!--This is a comments-->
     <main>
         <section class="two-thirds">
             <div class="card">
@@ -42,10 +34,17 @@
                 </div>
                 <div class="card-body">
                     <div class="card-content">
-                        <li>CSE 111: Introduction to Databases</li>
-                        <li>CSE 111: Introduction to Databases</li>
-                        <li>CSE 111: Introduction to Databases</li>
-                        <li>CSE 111: Introduction to Databases</li>
+                        <li>WDD 130 111: Web Fundamentals</li>
+                        <li>CSE 110: Introduction to Programming</li>
+                        <li>CSE 111: Programming With Function</li>
+                        <li>MATH 108X: Maths for a Real World</li>
+                        <li>CSE 121B: JavaScript Language</li>
+                        <li>CSE 210: Programming With Class</li>
+                        <li>CSE XXX: Introduction to Databases</li>
+                        <li>WDD 131: Dynamic Web Fundamentals</li>
+                        <li>WDD 231: Web Frontend Development 1</li>
+                        <li>CSE 270: Software Testing</li>
+                        <li>GS 170: Career Development</li>
                     </div>
                 </div>
             </div>
@@ -68,8 +67,22 @@
                 <div class="card-header">
                     <h2>Web and Computer Programming Certificate</h2>
                 </div>
-                <div class="image-container">
+                <div class="courses">
+                     <button>All</button>
+                     <button>Cse</button>
+                     <button>WDD</button>
                 </div>
+
+                <div class="courses-list">
+                    <button>CSE 110</button>
+                    <button>WDD 130</button>
+                    <button>CSE 111</button>
+                    <button>CSE 210</button>
+                    <button>WDD 131</button>
+                    <button>WDD 231</button>
+               </div>
+
+
                 <p>Pleasure Park</p>
             </div>
         </section>

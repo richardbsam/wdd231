@@ -152,6 +152,60 @@ main {
   text-align: center;
 }
 
+
+.courses {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.courses button {
+  padding: 10px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: darkslategrey;
+  color: white;
+}
+
+
+.courses button:hover {
+  background-color: rgb(141, 143, 54);
+}
+
+
+
+.courses-list {
+  display: block;
+}
+
+.courses-list button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(39, 24, 10);
+  color: white;
+
+
+  display: block;
+  width: 100%;
+  margin-bottom: 10px; /* Adjust according to your preference */
+
+}
+
+.courses-list button:hover {
+  background-color: rgb(141, 143, 54);
+}
+
+
+
+
+
+
 footer {
   background-color: #333;
   color: white;
@@ -181,37 +235,132 @@ footer p span {
 
 
 /* Navigation Styling */
+
 nav {
-  background-color: #333;
+	max-width: 900px;
+	margin: 1rem auto;
 }
-nav ul {
-  list-style-type: none;
+
+
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: white;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
 }
-nav a {
-  display: block;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  text-decoration: none;
+
+#menu::before {
+	content: "☰";
 }
-nav a:hover {
-  text-decoration: overline;
+
+#menu.open::before {
+	content: "❎";
 }
-.active {
-  color: yellow;
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: #333;
+	color: #fff;
 }
-nav.active {
-  display: flex; /* Show when active */
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
 }
-.hamburger {
-  display: block;
-  cursor: pointer;
-  color: var(--header-text-color);
-  font-size: 30px;
+
+
+.navigation a:hover {
+	background-color: #bbb;
+	color: #333;
+	font-weight: 700;
+  text-decoration: underline;
 }
-.hidden {
-  display: none;
+
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
 }
+
+.active::before { 
+	content: "📍";  /* just a wayfinding symbol for the user */
+}
+
+.stuff {
+	margin: 0.5m;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: #bed;
+	max-width: 580px;
+	height: 100vh;
+}
+
+
+
+/* large view navigation ************************************/
+@media (min-width: 640px) {
+
+	h1 {
+		font-size: 2rem;
+		margin-left: 0;
+		text-align: center;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	#menu {
+		display: none; /* hide hamburger button */
+	}
+
+	.navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+
+	.stuff {
+		margin: 1rem auto;
+	}
+
+
+
+
+
+
+  .courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.courses-list button {
+    width: calc(33.33% - 10px); /* Adjust according to your preference */
+    margin-bottom: 10px; /* Adjust according to your preference */
+}
+
+/* Apply styles for every third button */
+.courses-list button:nth-child(3n+1) {
+    order: -1; /* Place these buttons at the start */
+}
+}
+
+
+
+
 
 
 
