@@ -152,11 +152,59 @@ main {
   text-align: center;
 }
 
-.image-container {
-  align-items: center;
-  align-content: center;
+
+.courses {
   display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  gap: 10px;
 }
+
+.courses button {
+  padding: 10px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: darkslategrey;
+  color: white;
+}
+
+
+.courses button:hover {
+  background-color: rgb(141, 143, 54);
+}
+
+
+
+.courses-list {
+  display: block;
+}
+
+.courses-list button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(39, 24, 10);
+  color: white;
+
+
+  display: block;
+  width: 100%;
+  margin-bottom: 10px; /* Adjust according to your preference */
+
+}
+
+.courses-list button:hover {
+  background-color: rgb(141, 143, 54);
+}
+
+
+
+
+
 
 footer {
   background-color: #333;
@@ -287,6 +335,27 @@ nav {
 	.stuff {
 		margin: 1rem auto;
 	}
+
+
+
+
+
+
+  .courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.courses-list button {
+    width: calc(33.33% - 10px); /* Adjust according to your preference */
+    margin-bottom: 10px; /* Adjust according to your preference */
+}
+
+/* Apply styles for every third button */
+.courses-list button:nth-child(3n+1) {
+    order: -1; /* Place these buttons at the start */
+}
 }
 
 
