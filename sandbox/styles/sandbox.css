@@ -63,7 +63,7 @@ header {
   justify-content: center;
   gap: 2em; /* Space between img and h1 */
   top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 30px #333333; 
   width: 100%;
@@ -99,6 +99,13 @@ main {
 
 .one-third {
   grid-column: span 1;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .full-width {
@@ -241,6 +248,10 @@ nav {
 	margin: 1rem auto;
 }
 
+.navigation {
+  margin-top: 0; /* Reset default margin */
+}
+
 
 /* small view navigation */
 #menu {
@@ -263,6 +274,7 @@ nav {
 
 .navigation {
 	display: flex;
+  
 	flex-direction: column;
 	list-style: none;
 	background-color: #333;
