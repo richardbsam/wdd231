@@ -77,7 +77,8 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
-}nav
+}
+
 
 .two-thirds {
   grid-column: span 1;
