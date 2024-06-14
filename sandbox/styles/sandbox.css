@@ -174,7 +174,11 @@ main {
   background-color: rgb(141, 143, 54);
 }
 
-
+header, footer {
+  max-width: 900px;
+  margin: auto;
+  
+}
 
 /* Footer Styling */
 
