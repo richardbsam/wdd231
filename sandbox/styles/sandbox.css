@@ -17,28 +17,18 @@
   --font-family: 'Roboto', sans-serif;
 }
 
-
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-
 h1 {
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
-	font-size: 2rem;
-	margin-left: 1rem;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 2rem;
+  margin-left: 1rem;
 }
 
 h2 {
-	font-size: 1.2rem;
-	text-align: center;
-	margin: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem;
 }
-
 
 body {
   font-family: var(--font-family);
@@ -47,20 +37,14 @@ body {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
   font-size: 15px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  
 }
 
-
-header,nav, main, footer {
+header, nav, main, footer {
   max-width: 900px;
   margin: 0 auto;
 }
-
-
-
 
 /* Header styling */
 header {
@@ -71,10 +55,9 @@ header {
   align-items: center;
   justify-content: center;
   gap: 2em; /* Space between img and h1 */
-  top: 0;
   margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 30px #333333; 
+  box-shadow: 0 0 30px #333333;
   width: 100%;
   z-index: 1000; /* Ensure header is above other elements */
 }
@@ -82,9 +65,8 @@ header {
 .header-image {
   width: 100px;
   height: auto;
-  position: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 30px #333333; 
+  box-shadow: 0 0 30px #333333;
 }
 
 header h1 {
@@ -100,8 +82,6 @@ main {
   grid-gap: 10px;
 }
 
-
-
 .two-thirds {
   grid-column: span 1;
 }
@@ -114,7 +94,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .full-width {
@@ -134,7 +113,6 @@ main {
 .card-header {
   background-color: #005f33;
   color: #fff;
-  
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-align: center;
@@ -168,7 +146,6 @@ main {
   text-align: center;
 }
 
-
 .courses {
   display: flex;
   justify-content: center;
@@ -186,12 +163,9 @@ main {
   color: white;
 }
 
-
 .courses button:hover {
   background-color: rgb(141, 143, 54);
 }
-
-
 
 .courses-list {
   display: block;
@@ -205,32 +179,26 @@ main {
   border-radius: 5px;
   background-color: rgb(39, 24, 10);
   color: white;
-
-
   display: block;
   width: 100%;
   margin-bottom: 10px; /* Adjust according to your preference */
-
 }
 
 .courses-list button:hover {
   background-color: rgb(141, 143, 54);
 }
 
-
-
-
-
-
 footer {
+  display: flex;
+  justify-content: center;
+  
+  gap: 10px;
+
   background-color: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
   width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 2em; /* Space between img and h1 */
 }
 
 footer p {
@@ -243,176 +211,155 @@ footer p {
   height: auto;
 }
 
+
 footer p span {
   font-weight: lighter;
 }
 
-
-
-
 /* Navigation Styling */
 
 nav {
-	max-width: 900px;
-	margin: 1rem auto;
+  max-width: 900px;
+  margin: 1rem auto;
 }
 
 .navigation {
   margin-top: 0; /* Reset default margin */
 }
 
-
 /* small view navigation */
 #menu {
-	font-size: 1.5rem;
-	border: 0;
-	background: none;
-	color: white;
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 #menu::before {
-	content: "☰";
+  content: "☰";
 }
 
 #menu.open::before {
-	content: "❎";
+  content: "❎";
 }
 
 .navigation {
-	display: flex;
-  
-	flex-direction: column;
-	list-style: none;
-	background-color: #333;
-	color: #fff;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: #333;
+  color: #fff;
 }
 
 .navigation a {
-	display: none;
-	padding: 1rem;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
 }
 
-
 .navigation a:hover {
-	background-color: #bbb;
-	color: #333;
-	font-weight: 700;
+  background-color: #bbb;
+  color: #333;
+  font-weight: 700;
   text-decoration: underline;
 }
 
-
 /* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
-	display: block;
+  display: block;
 }
 
-.active::before { 
-	content: "📍";  /* just a wayfinding symbol for the user */
+.active::before {
+  content: "📍"; /* just a wayfinding symbol for the user */
 }
 
 .stuff {
-	margin: 0.5m;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	background-color: #bed;
-	max-width: 580px;
-	height: 100vh;
+  margin: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #bed;
+  max-width: 580px;
+  height: 100vh;
 }
 
-
-
-/* large view navigation ************************************/
+/* large view navigation */
 @media (min-width: 640px) {
+  h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
 
-	h1 {
-		font-size: 2rem;
-		margin-left: 0;
-		text-align: center;
-	}
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-	h2 {
-		font-size: 1.5rem;
-		text-align: center;
-	}
+  #menu {
+    display: none; /* hide hamburger button */
+  }
 
-	#menu {
-		display: none; /* hide hamburger button */
-	}
+  .navigation {
+    flex-direction: row;
+  }
 
-	.navigation {
-		flex-direction: row;
-	}
+  .navigation a {
+    display: block;
+    flex: 1 1 100%;
+  }
 
-	.navigation a {
-		display: block;
-		flex: 1 1 100%;
-	}
-
-	.stuff {
-		margin: 1rem auto;
-	}
-
-
-
-
-
+  .stuff {
+    margin: 1rem auto;
+  }
 
   .courses-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
+  }
 
-.courses-list button {
+  .courses-list button {
     width: calc(33.33% - 10px); /* Adjust according to your preference */
     margin-bottom: 10px; /* Adjust according to your preference */
-}
+  }
 
-/* Apply styles for every third button */
-.courses-list button:nth-child(3n+1) {
+  /* Apply styles for every third button */
+  .courses-list button:nth-child(3n+1) {
     order: -1; /* Place these buttons at the start */
+  }
 }
-}
-
-
-
-
-
-
-
 
 /* Responsive Grid for Larger Screens */
 @media (min-width: 640px) {
   main {
-      grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
 
   .two-thirds {
-      grid-column: span 1;
+    grid-column: span 1;
   }
 
   .one-third {
-      grid-column: span 1;
+    grid-column: span 1;
   }
 
   .full-width {
-      grid-column: span 2;
+    grid-column: span 2;
   }
 
   nav ul {
-      display: flex;
+    display: flex;
   }
 
   nav ul li {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 
   .hamburger {
-      display: none; /* Initially hidden */
+    display: none; /* Initially hidden */
   }
 }
