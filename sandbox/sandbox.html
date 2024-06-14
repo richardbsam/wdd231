@@ -9,21 +9,21 @@
     <link rel="stylesheet" href="styles/sandbox.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
     <script src="scripts/sandbox.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/header.jpg" alt="Header Picture" class="header-image">
+        <img src="images/header1.jpg" alt="Header Picture" class="header-image" width="100" height="auto">
         <h1>Richard Boniface Sam</h1>
     </header>
  
-    <button id="menu"></button>
-    <nav class="navigation">
+    <button id="menu" aria-label="Toggle Navigation Menu"></button>
+    <nav class="navigation" aria-label="Main Navigation">
         <a href="#" title="index.html" class="active">Home</a>
         <a href="#" title="#">Chamber</a>
-        <a href="#" title="#">GitHub Profile</a>
-        <a href="#" title="#">linkedin</a>
+        <a href="#" title="GitHub Profile">GitHub Profile</a>
+        <a href="#" title="LinkedIn Profile">LinkedIn</a>
     </nav>
     <!--This is a comment-->
     <main>
@@ -34,16 +34,17 @@
                 </div>
                 <div class="card-body">
                     <div class="card-content">
-                        <li>WDD 130: Web Fundamentals</li>
-                        <li>CSE 111: Programming With Functions</li>
-                        <li>CSE 210: Programming With Classes</li>
-                        <li>MATH 108X: Maths for the Real World</li>
-                        <li>CSE 121B: JavaScript Language</li>
-                        <li>CIT 111: Introduction to Databases</li>
-                        <li>WDD 131: Dynamic Web Fundamentals</li>
-                        <li>WDD 231: Web Frontend Development 1</li>
-                        <li>CSE 270: Software Testing</li>
-                        <li>GS 170: Career Development</li>             
+                        <ul>
+                            <li>WDD 130: Web Fundamentals</li>
+                            <li>CSE 111: Programming With Functions</li>
+                            <li>CSE 210: Programming With Classes</li>
+                            <li>CSE 121B: JavaScript Language</li>
+                            <li>CIT 111: Introduction to Databases</li>
+                            <li>WDD 131: Dynamic Web Fundamentals</li>
+                            <li>WDD 231: Web Frontend Development 1</li>
+                            <li>CSE 270: Software Testing</li>
+                            <li>GS 170: Career Development</li>             
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -55,7 +56,8 @@
                     <h2>Port Harcourt, Nigeria</h2>
                 </div>
                 <div class="image-container">
-                    <img src="images/profile.jpg" alt="profile">
+
+                    <img src="images/profile1.jpg" alt="profile" width="200" height="auto" loading="lazy">
                 </div>
                 <p>Pleasure Park</p>
             </div>
@@ -67,9 +69,9 @@
                     <h2>Web and Computer Programming Certificate</h2>
                 </div>
                 <div class="courses">
-                     <button>ALL</button>
-                     <button>CSE</button>
-                     <button>WDD</button>
+                    <button>ALL</button>
+                    <button>CSE</button>
+                    <button>WDD</button>
                 </div>
 
                 <div class="courses-list">
@@ -79,6 +81,7 @@
                     <button>CSE 210</button>
                     <button>WDD 131</button>
                     <button>WDD 231</button>
+                </div>
             </div>
         </section>
     </main>
@@ -92,7 +95,8 @@
         </div>
         
         <div>
-            <img src="images/flag.jpg" alt="flag" class="flag-image">
+           
+            <img src="images/flag.jpg" alt="flag" class="flag-image" width="60" height="auto">
         </div>
         
 

@@ -86,3 +86,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.getElementById('menu');
+    const nav = document.querySelector('.navigation');
+    const currentYear = document.getElementById('currentyear');
+    const lastModified = document.getElementById('lastModified');
+
+    menu.addEventListener('click', function () {
+        nav.classList.toggle('open');
+        menu.classList.toggle('open');
+    });
+
+    // Set the current year
+    currentYear.textContent = new Date().getFullYear();
+
+    // Set the last modified date
+    lastModified.textContent = `Last Modified: ${document.lastModified}`;
+});
