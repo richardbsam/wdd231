@@ -24,9 +24,7 @@
         <a href="#" title="#">Chamber</a>
         <a href="#" title="GitHub Profile">GitHub Profile</a>
         <a href="https://www.linkedin.com/in/richard-sam-99ba306a/" target="_blank" title="LinkedIn Profile">LinkedIn Profile</a>
-          
     </nav>
-    <!--This is a comment-->
     <main>
         <section class="two-thirds">
             <div class="card">
@@ -41,9 +39,7 @@
                             <li>CSE 111: Programming With Functions</li>
                             <li>CSE 210: Programming With Classes</li>
                             <li>WDD 131: Dynamic Web Fundamentals</li>
-                            <li>WDD 231: Web Frontend Development 1</li>
-                            <li>CSE121b: JavaScript Language</li>
-                            <li>CIT111: Introduction to Databases</li><br>             
+                            <li>WDD 231: Web Frontend Development 1</li><br>             
                         </ul>
                     </div>
                 </div>
@@ -55,7 +51,6 @@
                 <div class="card-header">
                     <h2>Port Harcourt, Nigeria</h2>
                 </div>
-                
                 <div class="image-container">
                     <img src="images/profile.jpg" alt="profile" width="200" loading="lazy">
                 </div>
@@ -69,18 +64,13 @@
                     <h2>Web and Computer Programming Certificate</h2>
                 </div>
                 <div class="courses">
-                    <button>ALL</button>
-                    <button>CSE</button>
-                    <button>WDD</button>
-                </div>
-
-                <div class="courses-list">
-                    <button>CSE 110</button>
-                    <button>WDD 130</button>
-                    <button>CSE 111</button>
-                    <button>CSE 210</button>
-                    <button>WDD 131</button>
-                    <button>WDD 231</button>
+                    <button data-filter="all">ALL</button>
+                    <button data-filter="CSE">CSE</button>
+                    <button data-filter="WDD">WDD</button>
+                </div><hr>
+                <div id="courses-list" class="courses-list"></div>
+                <div>
+                    <h3>Total Credits Required: <span id="total-credits"></span></h3>
                 </div>
             </div>
         </section>
@@ -93,13 +83,9 @@
             <br>All rights reserved.
             <p id="lastModified"></p>
         </div>
-        
         <div>
-           
             <img src="images/flag.jpg" alt="flag" class="flag-image" width="60">
         </div>
-        
-
     </footer>
 </body>
 </html>
