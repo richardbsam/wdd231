@@ -12,76 +12,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
     <script src="scripts/sandbox.js" defer></script>
 </head>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231: Web Frontend Development 1 - Richard Sam</title>
+    <meta name="description" content="WDD 231 - Web Frontend Development 1 | Richard Sam | Prerequisite course for Web and Computer Programming Certificate">
+    <meta name="author" content="Richard Sam">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="scripts/scripts.js" defer></script>
+</head>
 <body>
     <header>
         <img src="images/header.jpg" alt="Header Picture" class="header-image" width="100">
         <h1>Richard Boniface Sam</h1>
     </header>
- 
+
     <button id="menu" aria-label="Toggle Navigation Menu"></button>
     <nav class="navigation" aria-label="Main Navigation">
         <a href="#" title="index.html" class="active">Home</a>
         <a href="#" title="#">Chamber</a>
         <a href="#" title="GitHub Profile">GitHub Profile</a>
-        <a href="#" title="LinkedIn Profile">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/richard-sam-99ba306a/" target="_blank" title="LinkedIn Profile">LinkedIn Profile</a>
     </nav>
-    <!--This is a comment-->
+
     <main>
-        <section class="two-thirds">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Course Work</h2>
-                </div>
-                <div class="card-body">
-                    <div class="card-content">
-                        <ul>
-                            <li>WDD 130: Web Fundamentals</li>
-                            <li>CSE 111: Programming With Functions</li>
-                            <li>CSE 210: Programming With Classes</li>
-                            <li>CSE 121B: JavaScript Language</li>
-                            <li>CIT 111: Introduction to Databases</li>
-                            <li>WDD 131: Dynamic Web Fundamentals</li>
-                            <li>WDD 231: Web Frontend Development 1</li>
-                            <li>CSE 270: Software Testing</li>
-                            <li>GS 170: Career Development</li>             
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="one-third">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Port Harcourt, Nigeria</h2>
-                </div>
-                <div class="image-container">
-
-                    <img src="images/profile.jpg" alt="profile" width="200" loading="lazy">
-                </div>
-                <p>Pleasure Park</p>
-            </div>
-        </section>
-
         <section class="full-width">
             <div class="card">
                 <div class="card-header">
                     <h2>Web and Computer Programming Certificate</h2>
                 </div>
                 <div class="courses">
-                    <button>ALL</button>
-                    <button>CSE</button>
-                    <button>WDD</button>
+                    <button id="showAll">ALL</button>
+                    <button id="showCSE">CSE</button>
+                    <button id="showWDD">WDD</button>
                 </div>
-
-                <div class="courses-list">
-                    <button>CSE 110</button>
-                    <button>WDD 130</button>
-                    <button>CSE 111</button>
-                    <button>CSE 210</button>
-                    <button>WDD 131</button>
-                    <button>WDD 231</button>
-                </div>
+                <div class="courses-list" id="coursesList">
+                    <!-- Courses will be dynamically inserted here -->
+                </div><br>
+                <p>Total Credits: <span id="totalCredits">0</span></p>
             </div>
         </section>
     </main>
@@ -93,11 +68,9 @@
             <br>All rights reserved.
             <p id="lastModified"></p>
         </div>
-        
         <div>
             <img src="images/flag.jpg" alt="flag" class="flag-image" width="60">
         </div>
-        
     </footer>
 </body>
 </html>

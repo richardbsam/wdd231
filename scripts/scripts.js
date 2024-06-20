@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
         hamButton.classList.toggle('open');
     });
 
+
+
     // Course data
     const courses = [
         {
@@ -114,6 +116,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
 
+
+    
     // Calculate total credits
     const calculateTotalCredits = () => {
         const totalCredits = courses.reduce((acc, course) => acc + course.credits, 0);
