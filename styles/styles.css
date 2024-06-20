@@ -79,7 +79,6 @@ main {
   grid-gap: 10px;
 }
 
-
 .two-thirds {
   grid-column: span 1;
 }
@@ -110,7 +109,6 @@ main {
   text-align: center;
 }
 
-
 .card-body {
   padding: 20px;
   display: flex;
@@ -127,7 +125,7 @@ main {
 }
 
 .card p {
-  color: #666;
+  color: black;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -155,34 +153,47 @@ main {
 }
 
 .courses-list {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default to 1 column */
+  gap: 10px;
 }
 
-.courses-list button {
+.course-card {
+  border: 1px solid #ddd;
   padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
   border-radius: 5px;
-  background-color: rgb(39, 24, 10);
-  color: white;
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+  text-align: center;
 }
 
-.courses-list button:hover {
-  background-color: rgb(141, 143, 54);
+/* Style for completed courses */
+.course-card.completed {
+  background-color: #8b4513; /* Brown background for completed courses */
+  color: white; /* White text for completed courses */
+  border-color: #8b4513; /* Matching border color */
 }
 
-header, footer {
-  max-width: 900px;
-  margin: auto;
-  
+/* Style for not completed courses */
+.course-card.not-completed {
+  background-color: #e0ffe0; /* Light green background for not completed courses */
+  color: black; /* Black text for not completed courses */
+  border-color: #8bc34a; /* Green border for not completed courses */
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.course-card h3 {
+  margin: 0;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ff5733; /* Adjust highlight color as needed */
 }
 
 /* Footer Styling */
-
 footer {
   display: flex;
   justify-content: center;
@@ -206,6 +217,11 @@ footer p {
 
 footer p span {
   font-weight: lighter;
+}
+
+header, footer {
+  max-width: 900px;
+  margin: auto;
 }
 
 /* Navigation Styling */
@@ -308,19 +324,11 @@ nav {
   }
 
   .courses-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
   }
 
-  .courses-list button {
-    width: calc(33.33% - 10px); /* Adjust according to your preference */
-    margin-bottom: 10px; /* Adjust according to your preference */
-  }
-
-  /* Apply styles for every third button */
-  .courses-list button:nth-child(3n+1) {
-    order: -1; /* Place these buttons at the start */
+  .course-card {
+    margin: 10px;
   }
 }
 
@@ -354,22 +362,3 @@ nav {
     display: none; /* Initially hidden */
   }
 }
-
-
-
-
-
-.course-card {
-    border: 1px solid #ccc;
-    padding: 16px;
-    margin: 8px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.course-card.completed {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-}
-
-/* Other styles for your webpage */
