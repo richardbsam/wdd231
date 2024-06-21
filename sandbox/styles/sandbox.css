@@ -97,7 +97,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 250px; /* Set maximum width for the image container */
+  max-width: 150px; /* Set maximum width for the image container */
   margin: 0 auto; /* Center align horizontally */
 }
 
