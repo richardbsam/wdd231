@@ -130,6 +130,22 @@ main {
   height: auto;
 }
 
+.keynote-button {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  background-color: #692312;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.keynote-button:hover {
+  background-color: #7da323;
+}
+
 section {
   padding: 1rem;
   max-width: 900px;
@@ -180,7 +196,7 @@ section {
 /* Footer Styling */
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
   background-color: #333;
   color: white;
@@ -194,10 +210,21 @@ footer p {
   color: var(--footer-highlight-color);
 }
 
-.flag-image {
-  width: 60px;
+.social-media {
+  width: 50px;
   height: auto;
+  display: grid;
 }
+.social-media ul {
+  display: inline-block; /* Display list items horizontally */
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.social-media ul li a img {
+  vertical-align: middle; /* Align images vertically */
+}
+
+
 
 footer p span {
   font-weight: lighter;
