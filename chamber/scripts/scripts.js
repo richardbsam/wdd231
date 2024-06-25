@@ -1,6 +1,6 @@
 
 
-// current year for copyright and fetch the last modified date of the document.
+// 1. current year for copyright and fetch the last modified date of the document.
 document.addEventListener("DOMContentLoaded", function() {
     // Set current year and last modified date
     const currentYearSpan = document.getElementById("currentyear");
@@ -11,10 +11,27 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
+//2. HamburgerIcon
+  function toggleNav() {
+    var nav = document.querySelector('nav');
+    var hamburgerIcon = document.getElementById('hamburgerIcon');
+    var closeIcon = document.getElementById('closeIcon');
+
+    nav.classList.toggle('active');
+    
+    if (hamburgerIcon.style.display === 'none') {
+        hamburgerIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+    } else {
+        hamburgerIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+    }
+}
+
 
     
 
-//Jason
+// 3. Jason Fetch Members
 async function fetchMembers() {
     try {
       const response = await fetch('data/members.json');
@@ -78,20 +95,41 @@ async function fetchMembers() {
 
 
 
-  
-  function toggleNav() {
-    var nav = document.querySelector('nav');
-    var hamburgerIcon = document.getElementById('hamburgerIcon');
-    var closeIcon = document.getElementById('closeIcon');
-
-    nav.classList.toggle('active');
-    
-    if (hamburgerIcon.style.display === 'none') {
-        hamburgerIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
-    } else {
-        hamburgerIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-    }
+//Grid and list display using JSON data Source
+async function fetchMemberData() {
+  const response = await fetch('members.json');
+  const data = await response.json();
+  displayMembers(data);
 }
 
+function displayMembers(members) {
+  const container = document.getElementById('membersContainer');
+  container.innerHTML = '';
+  members.forEach(member => {
+      const memberCard = document.createElement('div');
+      memberCard.classList.add('member-card');
+      memberCard.innerHTML = `
+          <img src="${member.image}" alt="${member.name}">
+          <h3>${member.name}</h3>
+          <p>${member.address}</p>
+          <p>${member.phone}</p>
+          <a href="${member.website}" target="_blank">Website</a>
+          <p>${member.otherInfo}</p>
+      `;
+      container.appendChild(memberCard);
+  });
+}
+
+document.getElementById('grid').addEventListener('click', () => {
+  const container = document.getElementById('membersContainer');
+  container.classList.remove('list-view');
+  container.classList.add('grid-view');
+});
+
+document.getElementById('list').addEventListener('click', () => {
+  const container = document.getElementById('membersContainer');
+  container.classList.remove('grid-view');
+  container.classList.add('list-view');
+});
+
+document.addEventListener('DOMContentLoaded', fetchMemberData);

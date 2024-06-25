@@ -16,6 +16,7 @@
 <body>
     <header>
         <img src="images/logo.jpg" alt="Header Picture" class="header-image" width="100">
+        <h1>Camber of Commerce</h1>
         <nav>
             <ul>
                 <a href="#" title="index.html" class="active">Home</a>
@@ -40,13 +41,10 @@
                 <img src="images/hero-small.webp" alt="Chamber Places" width="500" height="250">
             </picture>
         </div>
-            
-        <div>
-            <h1>Home</h1>
-        </div>
 
         <section>
-            <section class="two-thirds">
+            <h1>Home</h1>
+            <div class="events">
                 <div class="card">
                     <div class="card-header">
                         <h2>Events</h2>
@@ -55,12 +53,12 @@
                         <p><br><br></p>                      
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section id="weather">
+            <div class="current-weather">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Current Weather <span class="weather-icon"></span></h2>
+                        <h2>Current Weather<span class="weather-icon"></span></h2>
                         <!-- Moved the weather icon inside the h2 element -->
                     </div>
                     <a id="weather-icon-link" href="images/weather.svg">
@@ -74,9 +72,9 @@
                     <p>Sunrise: <span id="sunrise">7:30 am</span></p>
                     <p>Sunset: <span id="sunsets">9:59 pm</span></p>
                 </div>   
-            </section>
+            </div>
     
-            <section class="weather">
+            <div class="weather-forcast">
                 <div class="card">
                     <div class="card-header">
                         <h2>Weather Forcast</h2>
@@ -87,13 +85,14 @@
                         <p>Windchill Factor: <span id="windChill"></span></p>
                     </div>
                 </div>
-            </section>  
+            </div>  
         </section>
-        <button onclick="toggleView()">Toggle View</button>
-        <div class="grid-container" id="memberContainer">
-                    <!-- Courses will be dynamically inserted here -->
-        </div>
-       
+
+        <div class="menu">
+            <button id="grid">⏹️Grid</button>
+            <button id="list">📄List</button>
+        </div><hr>
+        <div id="membersContainer" class="container grid-view"></div>       
     </main>
 
     <footer>
