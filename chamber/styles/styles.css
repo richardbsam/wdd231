@@ -134,7 +134,7 @@ main {
   position: absolute;
   bottom: 20px; /* Adjust as needed */
   right: 20px; /* Adjust as needed */
-  background-color: #692312;
+  background-color: #833407;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -143,7 +143,7 @@ main {
 }
 
 .keynote-button:hover {
-  background-color: #7da323;
+  background-color: #556e19;
 }
 
 section {
@@ -196,34 +196,41 @@ section {
 /* Footer Styling */
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 10px;
   background-color: #333;
   color: white;
   text-align: left;
-  padding: 10px 0;
+  padding: 10px;
   width: 100%;
+  flex-direction: column;
 }
 
 footer p {
   margin: 0;
   color: var(--footer-highlight-color);
+  align-items: center;
 }
 
-.social-media {
-  width: 50px;
-  height: auto;
-  display: grid;
-}
 .social-media ul {
-  display: inline-block; /* Display list items horizontally */
-  margin-right: 10px; /* Adjust spacing between icons */
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  display: flex; /* Display list items as flex items */
+  align-items: center; /* Center align items vertically */
+}
+
+.social-media ul li {
+  margin-right: 20px; /* Adjust spacing between icons */
+}
+
+.social-media ul li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
 }
 
 .social-media ul li a img {
-  vertical-align: middle; /* Align images vertically */
+  align-items: center;
 }
-
 
 
 footer p span {
@@ -287,6 +294,14 @@ header, footer {
 
   .hamburger {
     display: none; /* Initially hidden */
+  }
+  
+  footer {
+    flex-direction: row;
+    gap: 10px;
+    text-align: left;
+    padding: 10px 0;
+    width: 100%;
   }
 }
 
