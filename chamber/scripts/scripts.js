@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 
-    
-
 //3. Jason Fetch Members
 async function fetchMembers() {
     try {
@@ -57,6 +55,7 @@ async function fetchMembers() {
         <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
         <p><strong>Membership Level:</strong> ${getMembershipLevel(member.membershipLevel)}</p>
         <p>${member.otherInfo}</p>
+        <p>${member.tagLine}</p>
         <img src="images/${member.image}" alt="${member.name}" style="max-width: 100px;">
       `;
 
@@ -94,8 +93,7 @@ async function fetchMembers() {
 
 
 
-
-//Grid and list display using JSON data Source
+//4. Grid and list display using JSON data Source
 async function fetchMemberData() {
   const response = await fetch('members.json');
   const data = await response.json();
@@ -108,13 +106,16 @@ function displayMembers(members) {
   members.forEach(member => {
       const memberCard = document.createElement('div');
       memberCard.classList.add('member-card');
+
+
       memberCard.innerHTML = `
-          <img src="${member.image}" alt="${member.name}">
           <h3>${member.name}</h3>
-          <p>${member.address}</p>
+          <p>${member.tagLine}</p><hr>
+
+          <img src="${member.image}" alt="${member.name}">
+          <p>${member.email}</p>
           <p>${member.phone}</p>
           <a href="${member.website}" target="_blank">Website</a>
-          <p>${member.otherInfo}</p>
       `;
       container.appendChild(memberCard);
   });

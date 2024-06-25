@@ -1,64 +1,79 @@
 [
     {
-      "name": "Company A",
+      "name": "Tethys-Plantgeria Ltd",
+      "tagLine": "Diving & Marine Contractors",
       "address": "123 Main St, Cityville, State",
-      "phone": "123-456-7890",
-      "website": "http://www.companyA.com",
-      "image": "companyA.png",
+      "email": "Email: info@gmail.com",
+      "phone": "Phone: 123-456-7890",
+      "website": "http://www.tethys-plantgeria.com",
+      "image": "images/companyA.png",
       "membershipLevel": 1,
       "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       "name": "Company B",
-      "address": "456 Oak Ave, Townsville, State",
-      "phone": "456-789-0123",
-      "website": "http://www.companyB.com",
-      "image": "companyB.png",
-      "membershipLevel": 2,
-      "otherInfo": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "tagLine": "Diving & Marine Contractors",
+      "address": "123 Main St, Cityville, State",
+      "email": "Email: info@gmail.com",
+      "phone": "Phone: 123-456-7890",
+      "website": "http://www.tethys-plantgeria.com",
+      "image": "images/companyA.png",
+      "membershipLevel": 1,
+      "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
+
     {
       "name": "Company C", 
-      "address": "789 Elm Rd, Villagetown, State",
-      "phone": "789-012-3456",
-      "website": "http://www.companyC.com",
-      "image": "companyC.png",
-      "membershipLevel": 3,
-      "otherInfo": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+      "tagLine": "Lorem ipsum dolor sit amet",
+      "address": "123 Main St, Cityville, State",
+      "email": "Email: info@gmail.com",
+      "phone": "Phone: 123-456-7890",
+      "website": "http://www.tethys-plantgeria.com",
+      "image": "images/companyA.png",
+      "membershipLevel": 1,
+      "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       "name": "Company D",
+      "tagLine": "Lorem ipsum dolor sit amet",
       "address": "321 Pine Blvd, Hamletville, State",
-      "phone": "321-654-9870",
+      "email": "Email: info@gmail.com",
+      "phone": "Phone: 123-456-7890",
       "website": "http://www.companyD.com",
-      "image": "companyD.png",
+      "image": "images/companyA.png",
       "membershipLevel": 1,
       "otherInfo": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     },
     {
       "name": "Company E",
+      "tagLine": "Lorem ipsum dolor sit amet",
       "address": "654 Cedar Dr, Countryside, State",
-      "phone": "654-987-0123",
+      "email": "Email: info@gmail.com",
+      "phone": "Phone: 123-456-7890",
       "website": "http://www.companyE.com",
-      "image": "companyE.png",
+      "image": "images/companyA.png",
       "membershipLevel": 2,
       "otherInfo": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "name": "Company F",
+      "tagLine": "Lorem ipsum dolor sit amet",
       "address": "987 Birch Ln, Riverside, State",
-      "phone": "987-012-3456",
+      "email": "Email: info@gmail.com",
+      "phone": "Phone: 123-456-7890",
       "website": "http://www.companyF.com",
-      "image": "companyF.png",
+      "image": "images/companyA.png",
       "membershipLevel": 3,
       "otherInfo": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
     },
     {
       "name": "Company G",
+      "tagLine": "Lorem ipsum dolor sit amet",
       "address": "159 Maple Ave, Seaside, State",
-      "phone": "159-357-2468",
+      "email": "Email: info@gmail.com",
+      "phone": "Phone: 123-456-7890",
       "website": "http://www.companyG.com",
-      "image": "companyG.png",
+      "image": "images/companyA.png",
       "membershipLevel": 1,
       "otherInfo": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
     }
