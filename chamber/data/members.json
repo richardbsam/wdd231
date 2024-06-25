@@ -12,11 +12,11 @@
     },
     {
       "name": "Company B",
-      "tagLine": "Diving & Marine Contractors",
+      "tagLine": "Lorem ipsum dolor sit amet",
       "address": "123 Main St, Cityville, State",
       "email": "Email: info@gmail.com",
       "phone": "Phone: 123-456-7890",
-      "website": "http://www.tethys-plantgeria.com",
+      "website": "http://www.companyB.com",
       "image": "images/companyA.png",
       "membershipLevel": 1,
       "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -28,7 +28,7 @@
       "address": "123 Main St, Cityville, State",
       "email": "Email: info@gmail.com",
       "phone": "Phone: 123-456-7890",
-      "website": "http://www.tethys-plantgeria.com",
+      "website": "http://www.companyC.com",
       "image": "images/companyA.png",
       "membershipLevel": 1,
       "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
