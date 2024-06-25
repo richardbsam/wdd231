@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
 
-// 3. Jason Fetch Members
+//3. Jason Fetch Members
 async function fetchMembers() {
     try {
       const response = await fetch('data/members.json');
