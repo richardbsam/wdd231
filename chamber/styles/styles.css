@@ -224,7 +224,7 @@ footer {
   background-color: #333;
   color: white;
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
   flex-direction: column;
 }
@@ -349,7 +349,7 @@ header, footer {
     flex-direction: row;
     gap: 10px;
     text-align: left;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
   }
 }
