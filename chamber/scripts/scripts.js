@@ -134,3 +134,31 @@ document.getElementById('list').addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', fetchMemberData);
+
+
+
+
+
+
+
+//place//
+
+// Static values for temperature and wind speed
+var temperature = 10; // Temperature in Celsius
+var windSpeed = 5; // Wind speed in meters per second
+
+// Function to calculate windchill factor
+function calculateWindChill(temperature, windSpeed) {
+  // Windchill calculation formula
+  return (13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16)).toFixed(2);
+}
+
+// Function to display windchill factor on page load
+function displayWindChill() {
+  var windChill = calculateWindChill(temperature, windSpeed);
+  document.getElementById("windChill").innerText = windChill + " °C"; // Display windchill factor on the page
+}
+
+// Call displayWindChill function when the page loads
+window.onload = displayWindChill;
+

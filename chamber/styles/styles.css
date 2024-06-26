@@ -353,3 +353,28 @@ header, footer {
 .toggle-button {
   margin: 20px;
 }
+
+
+
+
+
+
+
+.current-weather h2::after {
+  content: ""; /* Remove the weather icon on smaller screens */
+}
+
+.current-weather img {
+  display: inline-block;
+  width: 40px;
+  height: auto;
+}
+
+#weather-icon-link {
+  display: block; /* Display as block for full width */
+  text-align: center; /* Center the content */
+  margin-bottom: 10px; /* Adjust spacing */
+}
+
+
+
