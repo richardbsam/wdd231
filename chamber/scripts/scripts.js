@@ -1,5 +1,6 @@
 
 
+
 // 1. current year for copyright and fetch the last modified date of the document.
 document.addEventListener("DOMContentLoaded", function() {
     // Set current year and last modified date
@@ -11,25 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-//2. HamburgerIcon
-  function toggleNav() {
-    var nav = document.querySelector('nav');
-    var hamburgerIcon = document.getElementById('hamburgerIcon');
-    var closeIcon = document.getElementById('closeIcon');
+// 2. Navigation HamburgerIcon
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
 
-    nav.classList.toggle('active');
-    
-    if (hamburgerIcon.style.display === 'none') {
-        hamburgerIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
-    } else {
-        hamburgerIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-    }
-}
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
+});
 
 
-//3. Jason Fetch Members
+// 3. Jason Fetch Members
 async function fetchMembers() {
     try {
       const response = await fetch('data/members.json');
@@ -93,7 +86,7 @@ async function fetchMembers() {
 
 
 
-//4. Grid and list display using JSON data Source
+// 4. Grid and list display using JSON data Source
 async function fetchMemberData() {
   const response = await fetch('members.json');
   const data = await response.json();
@@ -136,25 +129,7 @@ document.getElementById('list').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', fetchMemberData);
 
 
-
-//Navigation
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
-
-hamButton.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamButton.classList.toggle('open');
-});
-
-
-
-
-
-
-
-
-
-//place//
+//5. place//
 
 // Static values for temperature and wind speed
 var temperature = 10; // Temperature in Celsius
@@ -175,3 +150,24 @@ function displayWindChill() {
 // Call displayWindChill function when the page loads
 window.onload = displayWindChill;
 
+
+
+
+
+
+//xxx.Old HamburgerIcon
+function toggleNav() {
+  var nav = document.querySelector('nav');
+  var hamburgerIcon = document.getElementById('hamburgerIcon');
+  var closeIcon = document.getElementById('closeIcon');
+
+  nav.classList.toggle('active');
+  
+  if (hamburgerIcon.style.display === 'none') {
+      hamburgerIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+  } else {
+      hamburgerIcon.style.display = 'none';
+      closeIcon.style.display = 'block';
+  }
+}
