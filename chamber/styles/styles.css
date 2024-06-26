@@ -69,8 +69,36 @@ header h1 {
   margin: 0;
 }
 
+/* Navigation Styling */
+#menu {
+  font-size: 1.8rem;
+  border: 0;
+  background: none;
+  color: white;
+  top: 1rem;
+  right: 1rem;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❎";
+}
+
+.navigation {
+  margin-top: 70px; 
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: #fff;
+}
+
 nav {
-  gap: 20px;
+  max-width: 900px;
+  margin: 1rem auto;
+  gap: 10px;
   flex-direction: column;
   display: none; /* Initially hidden on mobile */
   background-color: var(--nav-bg-color);
@@ -81,18 +109,18 @@ nav {
   z-index: 1005;
   margin: 1rem auto;
   }
-
-nav a {
-  display: block;
-  color: var(--nav-text-color);
-  text-align: center;
+  
+.navigation a {
+  display: none;
   padding: 1rem;
+  text-align: center;
   text-decoration: none;
+  color: #fff;
   font-weight: bold;
 }
 
-nav a:hover {
-  font-weight: 800;
+.navigation a:hover {
+  font-weight: 700;
   text-decoration: underline double;
   text-decoration-color: #aad400; /* Yellow-green for contrast */
 }
@@ -101,19 +129,16 @@ nav.active {
   display: flex; /* Show when active */
 }
 
-.hamburger {
-  display: block;  
-  cursor: pointer;
-  color: var(--header-text-color);
-  font-size: 30px;
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+  display: block;
 }
 
-.hidden {
-  display: none;
+.active::before {
+  content: "📍"; /* just a wayfinding symbol for the user */
 }
 
-
-/* Main Content Styling */
+/*Main Styling*/
 main {
   padding: 1rem;
   max-width: 900px;
@@ -138,8 +163,8 @@ main {
   color: #fff;
   padding: 10px 30px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
 .keynote-button:hover {
@@ -167,7 +192,6 @@ section {
   height: 300px;
 }
 
-
 .card-header {
   background-color: #005f33;
   color: #fff; 
@@ -191,7 +215,6 @@ section {
   text-align: center;
   font-size: small;
 }
-
 
 /* Footer Styling */
 footer {
@@ -232,18 +255,24 @@ footer p {
   align-items: center;
 }
 
-
 footer p span {
   font-weight: lighter;
 }
 
 header, footer {
-  margin: auto;
+  margin: 0 auto;
 }
 
 
-/* large view navigation */
+/* Responsive Grid for Larger Screens */
 @media (min-width: 640px) {
+
+  .navigation {
+    margin-top: auto;
+    flex-direction: row;
+    justify-content: right;
+  }
+
   nav {
     display: flex;
     justify-content: flex-end;
@@ -254,6 +283,26 @@ header, footer {
     align-items: flex-end;
   }
   
+  .navigation a {
+    display: block;
+  }
+
+  #menu {
+    display: none; /* hide hamburger button */
+  }
+ 
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    flex: 1 1 100%;
+  }
+
   h1 {
     font-size: 1.8rem;
     margin-left: 0;
@@ -300,11 +349,10 @@ header, footer {
     flex-direction: row;
     gap: 10px;
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
   }
 }
-
 
 
 
