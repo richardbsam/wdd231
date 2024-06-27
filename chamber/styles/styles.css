@@ -104,9 +104,10 @@ nav {
   display: none; /* Initially hidden on mobile */
   background-color: var(--nav-bg-color);
   position: absolute;
-  top: 60px;
+  top: 65px;
   left: 0;
-  width: 100%;
+  right: 0;
+  width: 90%;
   z-index: 1005;
   margin: 1rem auto;
   }
