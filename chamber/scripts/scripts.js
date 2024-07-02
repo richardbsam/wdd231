@@ -1,3 +1,68 @@
+//6. OpenWeatherMap API
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchWeather();
+  fetchMembers();
+});
+
+function fetchWeather() {
+  const apiKey = 'YOUR_API_KEY';
+  const city = 'YOUR_CITY';
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  fetch(url)
+      .then(response => response.json())
+      .then(data => {
+          document.getElementById('temperature').textContent = `Temperature: ${data.main.temp} °C`;
+          document.getElementById('weather-description').textContent = `Description: ${data.weather[0].description}`;
+      })
+      .catch(error => console.error('Error fetching weather data:', error));
+
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  
+  fetch(forecastUrl)
+      .then(response => response.json())
+      .then(data => {
+          const forecastDays = data.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
+          document.getElementById('forecast-day-1').textContent = `Tomorrow: ${forecastDays[0].main.temp} °C, ${forecastDays[0].weather[0].description}`;
+          document.getElementById('forecast-day-2').textContent = `Day after Tomorrow: ${forecastDays[1].main.temp} °C, ${forecastDays[1].weather[0].description}`;
+          document.getElementById('forecast-day-3').textContent = `Third Day: ${forecastDays[2].main.temp} °C, ${forecastDays[2].weather[0].description}`;
+      })
+      .catch(error => console.error('Error fetching forecast data:', error));
+}
+
+function fetchMembers() {
+  fetch('members.json')
+      .then(response => response.json())
+      .then(members => {
+          const goldAndSilverMembers = members.filter(member => member.membershipLevel <= 2);
+          const selectedMembers = [];
+
+          while (selectedMembers.length < 3 && goldAndSilverMembers.length > 0) {
+              const randomIndex = Math.floor(Math.random() * goldAndSilverMembers.length);
+              selectedMembers.push(goldAndSilverMembers.splice(randomIndex, 1)[0]);
+          }
+
+          const membersContainer = document.getElementById('membersContainer');
+          membersContainer.innerHTML = '';
+
+          selectedMembers.forEach(member => {
+              const memberCard = document.createElement('div');
+              memberCard.classList.add('member-card');
+              memberCard.innerHTML = `
+                  <img src="${member.image}" alt="${member.name}">
+                  <h3>${member.name}</h3>
+                  <p>${member.tagLine}</p>
+                  <p>${member.address}</p>
+                  <p>${member.email}</p>
+                  <p>${member.phone}</p>
+                  <a href="${member.website}" target="_blank">Visit Website</a>
+              `;
+              membersContainer.appendChild(memberCard);
+          });
+      })
+      .catch(error => console.error('Error fetching members data:', error));
+}
 
 
 
@@ -171,3 +236,5 @@ function toggleNav() {
       closeIcon.style.display = 'block';
   }
 }
+
+
