@@ -107,7 +107,7 @@ nav {
   top: 60px;
   left: 0;
   right: 0;
-  width: 90%;
+  width: 95%;
   z-index: 1005;
   margin: 1rem auto;
   }
@@ -436,15 +436,31 @@ header, footer {
   margin: 20px 0;
 }
 
-.spotlight-card {
+.spotlight {
   border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 10px;
-  margin: 10px;
+  width: 250px;
   text-align: center;
 }
 
-.spotlight-card img {
-  width: 100px;
-  height: auto;
+.card-sportlights {
+  background-color: #f9f9f9;
+  border: 1px solid rgb(177, 168, 168);
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  height: auto;
+}
+
+.grid-view .member-card {
+  display: block;
+}
+
+.list-view .member-card {
+  display: block;
+  width: 100%;
 }
