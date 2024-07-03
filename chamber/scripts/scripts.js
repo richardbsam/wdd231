@@ -15,7 +15,6 @@ function fetchWeather() {
       .then(response => response.json())
       .then(data => {
           document.getElementById('current-temperature').textContent = `${data.main.temp} °C`;
-          
           document.getElementById('weather-description').textContent = data.weather[0].description;
           document.getElementById('high').textContent = `${data.main.temp_max} °C`;
           document.getElementById('low').textContent = `${data.main.temp_min} °C`;
@@ -40,42 +39,6 @@ function fetchWeather() {
       })
       .catch(error => console.error('Error fetching forecast data:', error));
 }
-
-
-//Fetch spotligt from members.Json
-function fetchSpotlights() {
-  fetch('members.json')
-      .then(response => response.json())
-      .then(members => {
-          const goldAndSilverMembers = members.filter(member => member.membershipLevel <= 2);
-          const selectedMembers = [];
-
-          while (selectedMembers.length < 3 && goldAndSilverMembers.length > 0) {
-              const randomIndex = Math.floor(Math.random() * goldAndSilverMembers.length);
-              selectedMembers.push(goldAndSilverMembers.splice(randomIndex, 1)[0]);
-          }
-
-          const spotlightsContainer = document.getElementById('spotlightsContainer');
-          spotlightsContainer.innerHTML = '';
-
-          selectedMembers.forEach(member => {
-              const spotlightCard = document.createElement('div');
-              spotlightCard.classList.add('spotlight-card');
-              spotlightCard.innerHTML = `
-                  <img src="${member.image}" alt="${member.name}">
-                  <h3>${member.name}</h3>
-                  <p>${member.tagLine}</p>
-                  <p>${member.address}</p>
-                  <p>${member.email}</p>
-                  <p>${member.phone}</p>
-                  <a href="${member.website}" target="_blank">Visit Website</a>
-              `;
-              spotlightsContainer.appendChild(spotlightCard);
-          });
-      })
-      .catch(error => console.error('Error fetching spotlights data:', error));
-}
-
 
 
 
@@ -186,20 +149,14 @@ document.addEventListener('DOMContentLoaded', function () {
           <img src="${member.image}" alt="${member.name}" class="spotlight-image">
           <h3>${member.name}</h3>
           <p>${member.tagLine}</p><hr>
-          <p><strong>Email:</strong>${member.email}</p>
+          <p><strong>Email:</strong> ${member.email}</p>
           <p><strong>Phone:</strong> ${member.phone}</p>
-         
           <a href="${member.website}" target="_blank">Website</a>
-    
       `;
 
       spotlightsContainer.appendChild(memberElement);
   });
 });
-
-
-
-
 
 
 
@@ -287,7 +244,6 @@ async function fetchMembers() {
   }
 
 
-
 // 4. Grid and list display using JSON data Source
 async function fetchMemberData() {
   const response = await fetch('members.json');
@@ -306,10 +262,9 @@ function displayMembers(members) {
       memberCard.innerHTML = `
           <h3>${member.name}</h3>
           <p>${member.tagLine}</p><hr>
-
           <img src="${member.image}" alt="${member.name}">
-          <p>${member.email}</p>
-          <p>${member.phone}</p>
+          <p><strong>Email:</strong> ${member.email}</p>
+          <p><strong>Phone:</strong> ${member.phone}</p>
           <a href="${member.website}" target="_blank">Website</a>
       `;
       container.appendChild(memberCard);
@@ -330,26 +285,5 @@ document.getElementById('list').addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', fetchMemberData);
 
-
-
-
-
-
-//xxx.Old HamburgerIcon
-function toggleNav() {
-  var nav = document.querySelector('nav');
-  var hamburgerIcon = document.getElementById('hamburgerIcon');
-  var closeIcon = document.getElementById('closeIcon');
-
-  nav.classList.toggle('active');
-  
-  if (hamburgerIcon.style.display === 'none') {
-      hamburgerIcon.style.display = 'block';
-      closeIcon.style.display = 'none';
-  } else {
-      hamburgerIcon.style.display = 'none';
-      closeIcon.style.display = 'block';
-  }
-}
 
 
