@@ -332,7 +332,7 @@ header, footer {
   }
 
   .weather-forecast {
-    grid-column: 2 / span 0;
+    grid-column: 2 / span 1;
   }
 
   nav ul {
