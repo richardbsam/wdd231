@@ -260,9 +260,9 @@ function displayMembers(members) {
 
 
       memberCard.innerHTML = `
+          <img src="${member.image}" alt="${member.name}">
           <h3>${member.name}</h3>
           <p>${member.tagLine}</p><hr>
-          <img src="${member.image}" alt="${member.name}">
           <p><strong>Email:</strong> ${member.email}</p>
           <p><strong>Phone:</strong> ${member.phone}</p>
           <a href="${member.website}" target="_blank">Website</a>
