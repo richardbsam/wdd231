@@ -1,37 +1,46 @@
 //6. OpenWeatherMap API
-
 document.addEventListener('DOMContentLoaded', () => {
   fetchWeather();
-  fetchMembers();
+  fetchSpotlights();
 });
 
 function fetchWeather() {
-  const apiKey = 'YOUR_API_KEY';
-  const city = 'YOUR_CITY';
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const apiKey = 'a2e4b9c1df36c51a6284d7b84a347502';
+  const lat = '4.79971';
+  const lon = '7.04204';
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
-  fetch(url)
+  fetch(weatherUrl)
       .then(response => response.json())
       .then(data => {
-          document.getElementById('temperature').textContent = `Temperature: ${data.main.temp} °C`;
-          document.getElementById('weather-description').textContent = `Description: ${data.weather[0].description}`;
+          document.getElementById('current-temperature').textContent = `${data.main.temp} °C`;
+          document.getElementById('weather-description').textContent = data.weather[0].description;
+          document.getElementById('high').textContent = `${data.main.temp_max} °C`;
+          document.getElementById('low').textContent = `${data.main.temp_min} °C`;
+          document.getElementById('humidity').textContent = `${data.main.humidity}%`;
+          document.getElementById('sunrise').textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+          document.getElementById('sunset').textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+          document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+          document.getElementById('weather-icon-link').href = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       })
       .catch(error => console.error('Error fetching weather data:', error));
 
-  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  
   fetch(forecastUrl)
       .then(response => response.json())
       .then(data => {
           const forecastDays = data.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
-          document.getElementById('forecast-day-1').textContent = `Tomorrow: ${forecastDays[0].main.temp} °C, ${forecastDays[0].weather[0].description}`;
-          document.getElementById('forecast-day-2').textContent = `Day after Tomorrow: ${forecastDays[1].main.temp} °C, ${forecastDays[1].weather[0].description}`;
-          document.getElementById('forecast-day-3').textContent = `Third Day: ${forecastDays[2].main.temp} °C, ${forecastDays[2].weather[0].description}`;
+          const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+          forecastDays.forEach((forecast, index) => {
+              const day = new Date(forecast.dt * 1000).getDay();
+              document.getElementById(`forecast-day-${index + 1}`).textContent = `${daysOfWeek[day]}: ${forecast.main.temp} °C, ${forecast.weather[0].description}`;
+          });
       })
       .catch(error => console.error('Error fetching forecast data:', error));
 }
 
-function fetchMembers() {
+function fetchSpotlights() {
   fetch('members.json')
       .then(response => response.json())
       .then(members => {
@@ -43,13 +52,13 @@ function fetchMembers() {
               selectedMembers.push(goldAndSilverMembers.splice(randomIndex, 1)[0]);
           }
 
-          const membersContainer = document.getElementById('membersContainer');
-          membersContainer.innerHTML = '';
+          const spotlightsContainer = document.getElementById('spotlightsContainer');
+          spotlightsContainer.innerHTML = '';
 
           selectedMembers.forEach(member => {
-              const memberCard = document.createElement('div');
-              memberCard.classList.add('member-card');
-              memberCard.innerHTML = `
+              const spotlightCard = document.createElement('div');
+              spotlightCard.classList.add('spotlight-card');
+              spotlightCard.innerHTML = `
                   <img src="${member.image}" alt="${member.name}">
                   <h3>${member.name}</h3>
                   <p>${member.tagLine}</p>
@@ -58,11 +67,18 @@ function fetchMembers() {
                   <p>${member.phone}</p>
                   <a href="${member.website}" target="_blank">Visit Website</a>
               `;
-              membersContainer.appendChild(memberCard);
+              spotlightsContainer.appendChild(spotlightCard);
           });
       })
-      .catch(error => console.error('Error fetching members data:', error));
+      .catch(error => console.error('Error fetching spotlights data:', error));
 }
+
+
+
+
+
+
+
 
 
 

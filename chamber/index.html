@@ -71,30 +71,40 @@
                     <a id="weather-icon-link" href="images/weather.svg">
                         <img id="weather-icon" src="images/weather.svg" alt="Weather Icon">
                     </a>
-                    <p><span id="#">75 °F</span></p>
-                    <p>Partly Cloudly</p>
+                  
+                    <p>Temperature: <span id="current-temperature">75 °F</span></p>
+                    <p>Description: <span id="weather-description">Partly Cloudy</span></p>
                     <p>High: <span id="high">85 °C</span></p>
                     <p>Low: <span id="low">52 °C</span></p>
-                    <p>Humidity: <span id="humidity">34 %</span></p>
+                    <p>Humidity: <span id="humidity">34%</span></p>
                     <p>Sunrise: <span id="sunrise">7:30 am</span></p>
-                    <p>Sunset: <span id="sunsets">9:59 pm</span></p>
+                    <p>Sunset: <span id="sunset">9:59 pm</span></p>
                 </div>   
             </div>
-    
-            <div class="weather-forcast">
+        
+            <div class="weather-forecast">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Weather Forcast</h2>
+                        <h2>Weather Forecast</h2>
                     </div>
-                    <div><br>
-                        <p>Today: <span id="temperature">90 °C</span></p>
-                        <p>Wednesday: <span id="Wednesday">89 °C</span></p>
-                        <p>Thursday: <span id="Thursday">69 °C</span></p>
+                    <div>
+                        <p>Today: <span id="forecast-day-1">90 °C, Clear</span></p>
+                        <p>Day 2: <span id="forecast-day-2">89 °C, Cloudy</span></p>
+                        <p>Day 3: <span id="forecast-day-3">69 °C, Rainy</span></p>
                     </div>
                 </div>
-            </div>  
+            </div>
+        
+            <section class="company-spotlights">
+                <div class="card-header">
+                    <h2>Company Spotlights</h2>
+                </div>
+                <div id="spotlightsContainer" class="spotlights-container"></div>
+            </section>
+        
         </section>
 
+           
         <div class="menu">
             <button id="grid">⏹️Grid</button>
             <button id="list">📄List</button>

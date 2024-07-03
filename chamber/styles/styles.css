@@ -55,14 +55,14 @@ header {
   gap: 2em;
   margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 30px #333333;
+
   width: 100%;
   z-index: 1000;
 }
 
 .header-logo {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 30px #333333;
+
 }
 
 header h1 {
@@ -332,7 +332,7 @@ header, footer {
   }
 
   .weather-forecast {
-    grid-column: 2 / span 1;
+    grid-column: 2 / span 0;
   }
 
   nav ul {
@@ -390,6 +390,7 @@ header, footer {
 .member-card img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 10px;
 }
 
 .grid-view .member-card {
@@ -427,4 +428,23 @@ header, footer {
 }
 
 
+/* styles/styles.css */
 
+.spotlights-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.spotlight-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.spotlight-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
