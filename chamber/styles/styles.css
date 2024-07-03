@@ -255,6 +255,7 @@ footer p {
 
 .social-media ul li a img {
   align-items: center;
+  width: 40px;
 }
 
 footer p span {
@@ -269,7 +270,6 @@ header, footer {
 /* Responsive Grid for Larger Screens */
 @media (min-width: 640px) {
 
-  
   .navigation {
     margin-top: auto;
     flex-direction: row;
@@ -352,9 +352,6 @@ header, footer {
     padding: 20px;
     width: 100%;
   }
-
-
-
 }
 
 
