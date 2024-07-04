@@ -1,7 +1,6 @@
-//6. OpenWeatherMap API
+//01 OpenWeatherMap API//
 document.addEventListener('DOMContentLoaded', () => {
   fetchWeather();
-  fetchSpotlights();
 });
 
 function fetchWeather() {
@@ -42,120 +41,44 @@ function fetchWeather() {
 
 
 
-//2. Fetch spotlight from scripts//
-
+//02 Fetch spotlight from Json//
 document.addEventListener('DOMContentLoaded', function () {
-  const members = [
-      {
-          "name": "Tethys-Plantgeria Ltd",
-          "tagLine": "Diving & Marine Contractors",
-          "address": "123 Main St, Cityville, State",
-          "email": "info@gmail.com",
-          "phone": "123-456-7890",
-          "website": "http://www.tethys-plantgeria.com",
-          "image": "images/companyA.png",
-          "membershipLevel": 3,
-          "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      },
-      {
-          "name": "Company B",
-          "tagLine": "Lorem ipsum dolor sit amet",
-          "address": "123 Main St, Cityville, State",
-          "email": "info@gmail.com",
-          "phone": "123-456-7890",
-          "website": "http://www.companyB.com",
-          "image": "images/companyA.png",
-          "membershipLevel": 1,
-          "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      },
-      {
-          "name": "Company C",
-          "tagLine": "Lorem ipsum dolor sit amet",
-          "address": "123 Main St, Cityville, State",
-          "email": "info@gmail.com",
-          "phone": "123-456-7890",
-          "website": "http://www.companyC.com",
-          "image": "images/companyA.png",
-          "membershipLevel": 1,
-          "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      },
-      {
-          "name": "Company D",
-          "tagLine": "Lorem ipsum dolor sit amet",
-          "address": "321 Pine Blvd, Hamletville, State",
-          "email": "info@gmail.com",
-          "phone": "123-456-7890",
-          "website": "http://www.companyD.com",
-          "image": "images/companyA.png",
-          "membershipLevel": 1,
-          "otherInfo": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-      },
-      {
-          "name": "Company E",
-          "tagLine": "Lorem ipsum dolor sit amet",
-          "address": "654 Cedar Dr, Countryside, State",
-          "email": "info@gmail.com",
-          "phone": "123-456-7890",
-          "website": "http://www.companyE.com",
-          "image": "images/companyA.png",
-          "membershipLevel": 2,
-          "otherInfo": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      },
-      {
-          "name": "Company F",
-          "tagLine": "Lorem ipsum dolor sit amet",
-          "address": "987 Birch Ln, Riverside, State",
-          "email": "info@gmail.com",
-          "phone": "123-456-7890",
-          "website": "http://www.companyF.com",
-          "image": "images/companyA.png",
-          "membershipLevel": 3,
-          "otherInfo": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-      },
-      {
-          "name": "Company G",
-          "tagLine": "Lorem ipsum dolor sit amet",
-          "address": "159 Maple Ave, Seaside, State",
-          "email": "info@gmail.com",
-          "phone": "123-456-7890",
-          "website": "http://www.companyG.com",
-          "image": "images/companyA.png",
-          "membershipLevel": 1,
-          "otherInfo": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+  fetch('data/members.json')
+    .then(response => response.json())
+    .then(members => {
+      // Filter members with gold or silver membership levels
+      const filteredMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
+
+      // Randomly select 2-3 members
+      const selectedMembers = [];
+      const numMembers = Math.floor(Math.random() * 2) + 2;
+
+      for (let i = 0; i < numMembers; i++) {
+          const randomIndex = Math.floor(Math.random() * filteredMembers.length);
+          selectedMembers.push(filteredMembers[randomIndex]);
+          filteredMembers.splice(randomIndex, 1);
       }
-  ];
 
-  // Filter members with gold or silver membership levels
-  const filteredMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
+      // Display the selected members in the company spotlights section
+      const spotlightsContainer = document.getElementById('spotlightsContainer');
 
-  // Randomly select 2-3 members
-  const selectedMembers = [];
-  const numMembers = Math.floor(Math.random() * 2) + 2;
+      selectedMembers.forEach(member => {
+          const memberElement = document.createElement('div');
+          memberElement.classList.add('spotlight');
 
-  for (let i = 0; i < numMembers; i++) {
-      const randomIndex = Math.floor(Math.random() * filteredMembers.length);
-      selectedMembers.push(filteredMembers[randomIndex]);
-      filteredMembers.splice(randomIndex, 1);
-  }
+          memberElement.innerHTML = `
+              <img src="${member.image}" alt="${member.name}" class="spotlight-image">
+              <h3>${member.name}</h3>
+              <p>${member.tagLine}</p><hr>
+              <p><strong>Email:</strong> ${member.email}</p>
+              <p><strong>Phone:</strong> ${member.phone}</p>
+              <a href="${member.website}" target="_blank">Website</a>
+          `;
 
-  // Display the selected members in the company spotlights section
-  const spotlightsContainer = document.getElementById('spotlightsContainer');
-
-  selectedMembers.forEach(member => {
-      const memberElement = document.createElement('div');
-      memberElement.classList.add('spotlight');
-
-      memberElement.innerHTML = `
-          <img src="${member.image}" alt="${member.name}" class="spotlight-image">
-          <h3>${member.name}</h3>
-          <p>${member.tagLine}</p><hr>
-          <p><strong>Email:</strong> ${member.email}</p>
-          <p><strong>Phone:</strong> ${member.phone}</p>
-          <a href="${member.website}" target="_blank">Website</a>
-      `;
-
-      spotlightsContainer.appendChild(memberElement);
-  });
+          spotlightsContainer.appendChild(memberElement);
+      });
+    })
+    .catch(error => console.error('Error fetching the members data:', error));
 });
 
 
