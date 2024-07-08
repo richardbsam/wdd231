@@ -30,81 +30,48 @@
         <nav class="navigation">
             <a href="index.html" title="Home" class="active">Home</a>
             <a href="directory.html" title="Directory">Directory</a>
-            <a href="#" title="Join">Join</a>
+            <a href="join.html" title="Join">Join</a>
             <a href="#" target="_blank" title="Discover">Discover</a>
         </nav>
       
     </header>
-
     <main>
-        <div class="hero">
-            <picture>
-                <!-- Add your source elements with media and srcset attributes -->
-                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
-                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
-                <!-- Add fallback image for browsers that do not support picture element -->
-                <img src="images/hero-small.webp" alt="Chamber Places" width="500" height="250">
-            </picture>
-            <a href="#" class="keynote-button">Keynote Ticket</a>
-        </div>
-        <h1>Home</h1>
+        <h1>Join Us</h1>
+    
+        <form method="GET" action="thanks.html" class="designOne">
+          <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label>Organizational Title <input type="text" name="title"  autocomplete="title" title="A title with abbreviation" placeholder="Mr./Mrs./Engr./Dr." ></label>
+            <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="234-801234-5678" ></label>
+            <label>Email <input type="email" name="email" required placeholder="sam123@gmail.com"  title="Your Email" autocomplete="email"></label>
+            <label>Business Organisation Name <input type="text" name="business type" required placeholder="XYZ Company Ltd"  title="Your Organistion Name" ></label>
+      
+    
+            <h3>Membership level</h3>
+            <label><input type="radio" name="ordinance" value="NP Membership"> NP Membership is for non profit organizations and there is no fee</label>
+            <label><input type="radio" name="ordinance" value="Bronze" checked> Bronze Membership</label>
+            <label><input type="radio" name="ordinance" value="Silver"> Silver Membership</label>
+            <label><input type="radio" name="ordinance" value="Gold"> Gold Membership</label>
+    
+            
+            <h3>Date and Location</h3>
+            <label>Date <input type="date" name="fecha" required></label>
+    
+            <label>Location
+              <select name="location" required>
+                <option value="">None</option>
+                <option value="Payson">Payson</option>
+                <option value="Orem">Orem</option>
+                <option value="Provo City Center">Provo City Center</option>
+            </label>
+    
+            <input type="submit" value="Submit Form">
+        </form>
+    
         
-
-        <section>
-            <div class="events">
-                <div class="card">
-                    <div class="card-header"> 
-                        <h2>Events</h2>
-                    </div>
-                    <div class="card-content">
-                        <p><br><br></p>                      
-                    </div>
-                </div>
-            </div>
-
-            <div class="current-weather">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Current Weather<span class="weather-icon"></span></h2>
-                        <!-- Moved the weather icon inside the h2 element -->
-                    </div>
-                    <a id="weather-icon-link" href="images/weather.svg">
-                        <img id="weather-icon" src="images/weather.svg" alt="Weather Icon">
-                    </a>
-                  
-                    <p>Temperature: <span id="current-temperature">26 °C</span></p>
-                    <p>Description: <span id="weather-description">Partly Cloudy</span></p>
-                    <p>High: <span id="high">85 °C</span></p>
-                    <p>Low: <span id="low">52 °C</span></p>
-                    <p>Humidity: <span id="humidity">34%</span></p>
-                    <p>Sunrise: <span id="sunrise">7:30 am</span></p>
-                    <p>Sunset: <span id="sunset">9:59 pm</span></p>
-                </div>   
-            </div>
-        
-            <div class="weather-forcast">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Weather Forecast</h2>
-                    </div><br>
-                    <div>
-                        <p><span id="forecast-day-1">90 °C, Clear</span></p>
-                        <p><span id="forecast-day-2">89 °C, Cloudy</span></p>
-                        <p><span id="forecast-day-3">69 °C, Rainy</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="spotlights">
-            <div class="card-sportlights">
-                <div class="card-header">
-                    <h2>Company Spotlights</h2>
-                </div>
-            </div>
-            <div id="spotlightsContainer" class="spotlights-container"></div>
-        </div>
     </main>
+
+   
 
            
     <footer>
