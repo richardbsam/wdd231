@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
             title: 'Introduction to Programming',
             credits: 2,
             certificate: 'Web and Computer Programming',
+            description: 'This course introduces basic programming concepts.',
+            technology: ['Python'],
             completed: true
         },
         {
@@ -22,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
             title: 'Web Fundamentals',
             credits: 2,
             certificate: 'Web and Computer Programming',
+            description: 'Learn the basics of HTML and CSS.',
+            technology: ['HTML', 'CSS'],
             completed: true
         },
         {
@@ -30,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
             title: 'Programming with Functions',
             credits: 2,
             certificate: 'Web and Computer Programming',
+            description: 'This course covers function-based programming techniques.',
+            technology: ['Python'],
             completed: true
         },
         {
@@ -38,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
             title: 'Programming with Classes',
             credits: 2,
             certificate: 'Web and Computer Programming',
+            description: 'Learn object-oriented programming using classes.',
+            technology: ['Python'],
             completed: true
         },
         {
@@ -46,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
             title: 'Dynamic Web Fundamentals',
             credits: 2,
             certificate: 'Web and Computer Programming',
+            description: 'An introduction to JavaScript and dynamic web development.',
+            technology: ['JavaScript', 'HTML', 'CSS'],
             completed: true
         },
         {
@@ -54,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
             title: 'Frontend Web Development I',
             credits: 2,
             certificate: 'Web and Computer Programming',
+            description: 'Learn the basics of web frontend development.',
+            technology: ['HTML', 'CSS', 'JavaScript'],
             completed: false
         }
     ];
@@ -74,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 coursesList.appendChild(courseCard);
 
                 totalCredits += course.credits;
+
+                courseCard.addEventListener('click', () => {
+                    displayCourseDetails(course);
+                });
             }
         });
 
@@ -87,6 +103,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initial display of all courses
     displayCourses();
+
+    // Function to display course details in a modal
+    function displayCourseDetails(course) {
+        const courseDetails = document.getElementById('course-details');
+        courseDetails.innerHTML = '';
+        courseDetails.innerHTML = `
+            <button id="closeModal">❌</button>
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p><strong>Certificate</strong>: ${course.certificate}</p>
+            <p>${course.description}</p>
+            <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        `;
+        courseDetails.showModal();
+
+        const closeModal = document.getElementById('closeModal');
+        closeModal.addEventListener('click', () => {
+            courseDetails.close();
+        });
+
+        // Close modal when clicking outside of it
+        courseDetails.addEventListener('click', (event) => {
+            if (event.target === courseDetails) {
+                courseDetails.close();
+            }
+        });
+    }
 });
 
 // Hamburger menu toggle

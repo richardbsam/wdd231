@@ -13,8 +13,6 @@
     <script src="scripts/scripts.js" defer></script>
 </head>
 
-
-
 <body>
     <header>
         <img src="images/header.jpg" alt="Header Picture" class="header-image" width="100">
@@ -62,11 +60,6 @@
             </div>
         </section>
 
-
-
-
-
-
         <section class="full-width">
             <div class="card">
                 <div class="card-header">
@@ -77,12 +70,18 @@
                     <button id="showCSE">CSE</button>
                     <button id="showWDD">WDD</button>
                 </div>
+             
                 <div class="courses-list" id="coursesList">
+               
                     <!-- Courses will be dynamically inserted here -->
                 </div><br>
                 <p>Total Credits: <span id="totalCredits">0</span></p>
-            </div>
+            </div>    
         </section>
+        
+        <!-- Empty dialog element for course details -->
+        <dialog id="course-details"></dialog>
+       
     </main>
 
     <footer>
@@ -98,3 +97,5 @@
     </footer>
 </body>
 </html>
+
+
