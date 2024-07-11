@@ -21,7 +21,6 @@
 body {
   font-family: var(--font-family);
   margin: 0;
-
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
   font-size: 15px;
@@ -467,11 +466,6 @@ header, footer {
 
 /*Join Styling*/
 
-*{box-sizing: border-box;}
-html {
-  -webkit-text-size-adjust: 100%; 
-  -ms-text-size-adjust: 100%;
-}
 
 form {
     margin: 1rem 2%;
@@ -535,10 +529,7 @@ form {
 
 
   }
-  input:-webkit-autofill{
-    -webkit-text-fill-color: #3D405B;
-  }
-  
+
   #results {
     background-color: #F4F1DE;
     padding: 0 1rem;
