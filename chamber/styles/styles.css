@@ -514,9 +514,9 @@ form {
     input[type=submit] {
       border: none;
       text-align: center;
-      background-color: #5f2b0d;
+      background-color: #382202;
       color: white;
-      border-radius: 0.5rem;
+      border-radius: 0.25rem;
       padding: 0.5rem 0.5rem;
       margin: 2rem 0;
       font-size: 1.2rem;
