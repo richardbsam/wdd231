@@ -1,0 +1,47 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.thankyou-container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.thankyou-container h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.thankyou-container p {
+    margin: 10px 0;
+}
+
+.thankyou-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.thankyou-container li {
+    text-align: left;
+    margin: 5px 0;
+}
+
+.thankyou-container a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.thankyou-container a:hover {
+    text-decoration: underline;
+}

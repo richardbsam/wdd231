@@ -13,21 +13,28 @@
     <meta property="og:image" content="https://facebook.com/images/image.jpg">
     <meta property="og:url" content="https://facebook.com/page-url">
 
-
-    <link rel="stylesheet" href="styles/thanks.css"> 
+    <link rel="stylesheet" href="styles/thankyou.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 
 <body>
     <div class="thankyou-container">
         <h1>Thank You!</h1>
-        <p>Thank you for joining us. Your submission has been received.</p>
+        <p>Thank you for joining us. Your submission has been received. Here are the details you provided:</p>
+        <ul>
+            <li><strong>First Name:</strong> <span id="firstName"></span></li>
+            <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+            <li><strong>Email:</strong> <span id="email"></span></li>
+            <li><strong>Mobile Number:</strong> <span id="phone"></span></li>
+            <li><strong>Business Name:</strong> <span id="business"></span></li>
+            <li><strong>Submission Date:</strong> <span id="timestamp"></span></li>
+        </ul>
         <p>We will get back to you shortly.</p>
         <p><a href="index.html">Return to Homepage</a></p>
     </div>
+  
 </body>
-
 </html>

@@ -13,7 +13,6 @@
     <meta property="og:image" content="https://facebook.com/images/image.jpg">
     <meta property="og:url" content="https://facebook.com/page-url">
 
-
     <link rel="stylesheet" href="styles/styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +22,7 @@
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Header Picture" class="header-image" width="80">
+        <img src="images/logo.png" alt="Header Picture" class="header-image" width="70">
         <h1>PHcity Chamber of Commerce</h1>
 
         <button id="menu"></button>
@@ -36,33 +35,75 @@
       
     </header>
     <main>
-        <h1>Join the Chamber!</h1><br>
-    
-        <form method="GET" action="thanks.html" class="designOne">
-          <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+        <h1>Join the Chamber!</h1>
+
+        <form method="GET" action="thankyou.html" class="designOne">
+            <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
             <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-            <label>Organizational Title <input type="text" name="Your title"  title="A title with abbreviation" placeholder="Mr./Mrs./Engr./Dr." ></label>
-            <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="234-801234-5678" ></label>
-            <label>Email <input type="email" name="email" required placeholder="sam123@gmail.com"  title="Your Email" autocomplete="email"></label>
-            <label>Business Organisation Name <input type="text" name="business type" required placeholder="XYZ Company Ltd"  title="Your Organistion Name" ></label>
-      
-            <h3>Membership level</h3>
-            <label><input type="radio" name="ordinance" value="NP Membership" checked> NP Membership is for non profit organizations and there is no fee</label>
-            <label><input type="radio" name="ordinance" value="Bronze"> Bronze Membership</label>
-            <label><input type="radio" name="ordinance" value="Silver"> Silver Membership</label>
-            <label><input type="radio" name="ordinance" value="Gold"> Gold Membership</label>
-    
-            <h3>Date and Location</h3>
-            <label>Date <input type="date" name="fecha" required></label>
-    
-          
+            <label>Organizational Title <input type="text" name="organization-title" title="A title with abbreviation" autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}" placeholder="Mr./Mrs./Engr./Dr."></label>
+            <label>Email <input type="email" name="email" required autocomplete="email" placeholder="sam123@gmail.com" title="Your Email"></label>
+            <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="234-801234-5678"></label>
+            <label>Business Organisation Name <input type="text" name="business" required autocomplete="organization" title="Your Organisation Name" placeholder="XYZ Company Ltd"></label>
+
+            <h3>Membership Level</h3>
+            <label>
+                <input type="radio" name="membership" value="NP Membership" required title="Select NP Membership">
+                NP Membership (No fee for non-profit organizations)
+                <br><br>
+                <input type="radio" name="membership" value="Bronze" required title="Select Bronze Membership">
+                Bronze Membership
+                <br><br>
+                <input type="radio" name="membership" value="Silver" required title="Select Silver Membership">
+                Silver Membership
+                <br><br>
+                <input type="radio" name="membership" value="Gold" required title="Select Gold Membership">
+                Gold Membership
+            </label><br>
+
+            <button type="button" onclick="openModal()">Learn More About Membership Levels</button>
+
+            <div id="membershipModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    
+                    <h2>Membership Benefits</h2>
+                    
+                    <h3>NP Membership</h3>
+                    <li>For non profit organizations and there is no fee</li>
+                       
+                    <h3>Bronze Membership</h3>
+                    <li>15% discount on events</li> 
+                    <li>10% discount on advertising</li> 
+                    <li>Fee of $50/month</li>
+
+                    <h3>Silver Membership</h3>
+                    <li>25% discount on events</li>
+                    <li>15% discount on advertising</li>
+                    <li>Free participation in the trade fair</li>
+                    <li>Fee of $100/month</li>
+                    
+                    <h3>Gold Membership</h3>
+                    <li>50% discount on events</li> 
+                    <li>50% discount on advertising</li> 
+                    <li>Free participation in the trade fair</li> 
+                    <li>5 free featured ads per year</li> 
+                    <li>1 free training per quarter</li> 
+                    <li>Fee of $250/month</li>
+
+                </div>
+            </div>
+            
+            <h3>Business/Organization's Description </h3>
+            <label class="myinput">
+                <textarea name="description" cols="40" rows="8" title="Describe your organization"></textarea>
+            </label>
+            
+            <input type="hidden" name="timestamp" id="timestamp" value="">
             <input type="submit" value="Join the Chamber!">
         </form>
-    
-        
+
     </main>
 
-            
     <footer>
         <div>
             <h3>PHcity Chamber of Commerce</h3>
@@ -81,7 +122,6 @@
             </ul>          
         </div>
 
-
         <div>
             <h3>WDD231 Class Project</h3>
             <p>Richard Boniface Sam</p>
@@ -90,5 +130,7 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+
+    
 </body>
 </html>

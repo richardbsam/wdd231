@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// 1. current year for copyright and fetch the last modified date of the document.
+//03 current year for copyright and fetch the last modified date of the document.
 document.addEventListener("DOMContentLoaded", function() {
     // Set current year and last modified date
     const currentYearSpan = document.getElementById("currentyear");
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-// 2. Navigation HamburgerIcon
+//04 Navigation HamburgerIcon
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
@@ -104,7 +104,7 @@ hamButton.addEventListener('click', () => {
 });
 
 
-// 3. Jason Fetch Members
+// 05 Jason Fetch Members
 async function fetchMembers() {
     try {
       const response = await fetch('data/members.json');
@@ -167,7 +167,7 @@ async function fetchMembers() {
   }
 
 
-// 4. Grid and list display using JSON data Source
+//06 Grid and list display using JSON data Source
 async function fetchMemberData() {
   const response = await fetch('members.json');
   const data = await response.json();
@@ -210,3 +210,99 @@ document.addEventListener('DOMContentLoaded', fetchMemberData);
 
 
 
+
+
+
+
+//7. Join page
+document.addEventListener('DOMContentLoaded', (event) => {
+  const timestamp = new Date().toISOString();
+  document.getElementById('timestamp').value = timestamp;
+
+  const modal = document.getElementById('membershipModal');
+  const btn = document.getElementById('learnMoreBtn');
+  const span = document.getElementsByClassName('close')[0];
+
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+  // Animation for membership cards
+  const membershipCards = document.querySelectorAll('option');
+  membershipCards.forEach((card, index) => {
+      setTimeout(() => {
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)';
+      }, index * 100);
+  });
+});
+
+
+//6. Thank you script
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Display form data on the thank you page
+  const urlParams = new URLSearchParams(window.location.search);
+  document.getElementById('firstName').textContent = urlParams.get('first');
+  document.getElementById('lastName').textContent = urlParams.get('last');
+  document.getElementById('email').textContent = urlParams.get('email');
+  document.getElementById('phone').textContent = urlParams.get('phone');
+  document.getElementById('business').textContent = urlParams.get('business');
+  document.getElementById('timestamp').textContent = urlParams.get('timestamp');
+
+
+  
+  // Handle modal display
+  const modal = document.getElementById('membershipModal');
+  const span = document.getElementsByClassName('close')[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = 'none';
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = 'none';
+      }
+  }
+
+  // Close the modal when clicking anywhere inside the modal content
+  modal.onclick = function() {
+      modal.style.display = 'none';
+  }
+});
+
+
+
+
+
+
+
+ // Function to open the modal
+ function openModal() {
+  document.getElementById('membershipModal').style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById('membershipModal').style.display = 'none';
+}
+
+// Close the modal when clicking outside of the modal content
+window.onclick = function(event) {
+  if (event.target == document.getElementById('membershipModal')) {
+      closeModal();
+  }
+}
