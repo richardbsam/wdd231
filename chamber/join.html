@@ -40,7 +40,14 @@
         <form method="GET" action="thankyou.html" class="designOne">
             <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
             <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-            <label>Organizational Title <input type="text" name="organization-title" title="A title with abbreviation" autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}" placeholder="Mr./Mrs./Engr./Dr."></label>
+            <label for="organization-title">Organizational Title</label>
+            
+            <label for="organization-title"></label>
+            <input type="text" id="organization-title" name="organization-title" 
+                   autocomplete="organization-title" 
+                   pattern="[A-Za-z\s-]{7,}" 
+                   title="Please enter at least 7 characters. Only letters, hyphens, and spaces are allowed.">
+            
             <label>Email <input type="email" name="email" required autocomplete="email" placeholder="sam123@gmail.com" title="Your Email"></label>
             <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="234-801234-5678"></label>
             <label>Business Organisation Name <input type="text" name="business" required autocomplete="organization" title="Your Organisation Name" placeholder="XYZ Company Ltd"></label>
