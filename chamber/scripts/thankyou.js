@@ -9,3 +9,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+
+// Function to display the submission date
+function displaySubmissionDate() {
+    const currentDate = new Date();
+    const timestampElement = document.getElementById('timestamp');
+
+    // Format the date as desired (e.g., "Month Day, Year Hours:Minutes:Seconds")
+    const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit' 
+    };
+    const formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+    timestampElement.textContent = formattedDate;
+}
+
+// Call the function to display the submission date when the page loads
+document.addEventListener('DOMContentLoaded', displaySubmissionDate);
