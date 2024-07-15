@@ -1,11 +1,9 @@
-
 /* General Styles */
 * {
   box-sizing: border-box;
   margin: 0;
-
-
 }
+
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #e74c3c;
@@ -14,7 +12,6 @@
   --font-size: 15px;
   --h1-font-size: 30px;
   --h2-font-size: 18px;
-
 }
 
 body {
@@ -44,10 +41,6 @@ h2 {
   color: var(--secondary-color);
 }
 
-
-
-
-
 /* Footer Styling */
 footer {
   display: flex;
@@ -60,8 +53,6 @@ footer {
   background-color: var(--primary-color);
   text-align: center;
   padding: 10px 0;
-  bottom: 0;
-  width: 100%;
 }
 
 footer p {
@@ -72,14 +63,14 @@ footer p {
 
 .social-media ul {
   list-style-type: none;
-  padding: 10px;
+  padding: 0;
   margin: 0;
   display: flex; /* Display list items as flex items */
-  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
 }
 
 .social-media ul li {
-  margin-right: 20px; /* Adjust spacing between icons */
+  margin: 0 10px; /* Adjust spacing around icons */
 }
 
 .social-media ul li:last-child {
@@ -87,7 +78,6 @@ footer p {
 }
 
 .social-media ul li a img {
-  align-items: center;
   width: 30px;
 }
 
@@ -95,21 +85,13 @@ footer p span {
   font-weight: lighter;
 }
 
-header, footer {
-  margin: 0 auto;
-}
-
-
-
-
 /* Responsive Grid for Larger Screens */
 @media (min-width: 640px) {
-
-footer {
-  flex-direction: row;
-  gap: 10px;
-  text-align: left;
-  padding: 20px;
-  width: 100%;
-}
+  footer {
+    flex-direction: row;
+    gap: 10px;
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+  }
 }
