@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy LivingHub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Healthy LivingHub</h1>      
+        <nav>
+            <a href="index.html" class="Home">Home</a>
+            <a href="about.html" title="About">About Us</a>
+            <a href="contact.html" title="Contact">Contact Us</a>
+        </nav>
+
+        <div class="hamburger" onclick="toggleNav()">
+            <span id="hamburgerIcon">&#9776;</span> <!-- Hamburger icon -->
+            <span id="closeIcon" class="hidden">&times;</span> <!-- Close icon -->
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero-image.jpg" alt="Healthy lifestyle" class="hero-image" loading="lazy">
+            <div class="hero-text">
+                <h2>Welcome!</h2>
+                <p>Your go-to source for living a healthier lifestyle!</p>
+            </div>
+        </section>  
+        
+        <br> 
+        <article class="intro-article">
+            <header>
+                <h2>Introduction</h2>
+                <p>Explore a range of articles focused on enhancing your health and well-being.</p>
+            </header>
+        </article>
+
+        <div class="articles">
+            <article>
+                <h3>Nutrition Tips</h3>
+                <p>Learn how to eat healthier with our nutrition tips.</p>
+                <img src="images/nutrition.jpg" alt="Healthy food" loading="lazy">
+            </article>
+            <article>
+                <h3>Exercise Routines</h3>
+                <p>Discover effective exercises to stay fit and healthy.</p>
+                <img src="images/exercise.jpg" alt="Exercise" loading="lazy">
+            </article>
+            <article>
+                <h3>Mental Well-being</h3>
+                <p>Improve your mental health with our well-being advice.</p>
+                <img src="images/mental-wellbeing.jpg" alt="Mental well-being" loading="lazy">
+            </article>
+            <article>
+                <h3>Physical Health</h3>
+                <p>Improve your physical health with our health tips and advice.</p>
+                <img src="images/physical-health.jpg" alt="Healthy food" loading="lazy">
+            </article>
+            <article>
+                <h3>Home Care</h3>
+                <p>Discover our effective home care program to stay fit and healthy.</p>
+                <img src="images/home-care.jpg" alt="Exercise" loading="lazy">
+            </article>
+            <article>
+                <h3>Relaxation Tips</h3>
+                <p>Learn more on relaxation tips to improve your overall Well-being.</p>
+                <img src="images/relaxation.jpg" alt="Mental well-being" loading="lazy">
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <span id="copyright">&#169;</span>
+        <span id="currentyear"></span> 🎀 Richard Boniface Sam 🎀 Nigeria. 
+        <br>All rights reserved.
+        <p id="lastModified"></p>
+    </footer>
+    
+    <script src="scripts/scripts.js" defer></script> 
+</body>
+</html>

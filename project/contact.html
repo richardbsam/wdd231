@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - Healthy LivingHub</title>
+        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Richard Sam | Prerequisite course for web development">
+        <meta name="author" content="Richard Sam">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/styles-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Healthy LivingHub</h1>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html" title="About">About Us</a>
+                <a href="contact.html" title="Contact">Contact Us</a> 
+            </nav>
+            <div class="hamburger" onclick="toggleNav()">
+                <span id="hamburgerIcon">&#9776;</span> <!-- Hamburger icon -->
+                <span id="closeIcon" class="hidden">&times;</span> <!-- Close icon -->
+            </div>
+        </header>
+        <main>
+            <div class="about-header">
+                <h1>Contact Healthy LivingHub</h1>
+                <hr>
+                <br>
+                <p>Whether you’re an existing customer, or you’re interested in joining us, you can find out the best way to contact us here.</p>
+            </div>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+            <br>
+            <div class="social-media">
+               <br><br><br> <h2>Connect with Us</h2>
+                <a href="https://www.whatsapp.com" target="_blank">
+                    <img src="images/whatsapp.png" alt="whatsapp">
+                </a>
+                <a href="https://www.facebook.com/richard.b.sam" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/youtube.png" alt="YouTube">
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <span id="copyright">&#169;</span>
+            <span id="currentyear"></span> 🎀 Richard Boniface Sam 🎀 Nigeria. 
+            <br>All rights reserved.
+            <p id="lastModified"></p>
+        </footer>
+
+        <script src="scripts/scripts.js" defer></script>
+    </body>
+</html>

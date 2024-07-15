@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: #ffffff;
+  --main-text-color: #2c3e50;
+  --header-bg-color: #005f33;
+  --header-text-color: #ffffff;
+  --nav-bg-color: #333333;
+  --nav-text-color: #ffffff;
+  --footer-bg-color: #005f33;
+  --footer-text-color: #ffffff;
+  --footer-highlight-color: #e5a00d; /* Darker yellow for better contrast */
+  --font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px #333333; 
+  width: 100%;
+  z-index: 1000; /* Ensure header is above other elements */
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  gap: 20px;
+  flex-direction: column;
+  display: none; /* Initially hidden on mobile */
+  background-color: var(--nav-bg-color);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+nav a {
+  display: block;
+  color: var(--nav-text-color);
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  font-weight: 800;
+  text-decoration: underline double;
+  text-decoration-color: #aad400; /* Yellow-green for contrast */
+}
+
+.active {
+  color: var(--nav-active-color);
+}
+
+nav.active {
+  display: flex; /* Show when active */
+}
+
+.hamburger {
+  display: block;  
+  cursor: pointer;
+  color: var(--header-text-color);
+  font-size: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: for better text readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.intro-article p {
+  color: white;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+article {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light grey background for better contrast */
+}
+
+article h3 {
+  color: #2c3e50; /* Darker shade for better contrast */
+}
+
+article p {
+  color: #34495e; /* Darker shade for better contrast */
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  color: var(--footer-highlight-color);
+}
+
+footer p span {
+  font-weight: lighter;
+}
+
+
+
+
+/* About Us Styling */
+
+.about {
+  text-align: center;
+}
+
+.about-header {
+  margin-bottom: 40px;
+}
+
+.about-header h1 {
+ font-size: 50px;
+ 
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  align-items: center;
+}
+
+.about-image-container {
+  overflow: hidden;
+  border-radius: 10px 0 0 10px;
+}
+
+.about-image {
+  width: 80%;
+  height: auto;
+}
+
+.about-text {
+  padding: 20px;
+}
+
+.about-text h2 {
+  color: var(--header-bg-color);
+}
+
+
+
+
+/* Contact Us Styling*/
+
+.social-media {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-media h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 32px;
+  height: 32px;
+}
+
+
+
+
+.submit-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: var(--button-hover-color);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Healthy Living Hub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Healthy LivingHub</h1>        
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html" title="About">About Us</a>
+        <a href="contact.html" title="Contact">Contact Us</a>
+    </nav>
+    <div class="hamburger" onclick="toggleNav()">
+        <span id="hamburgerIcon">&#9776;</span> <!-- Hamburger icon -->
+        <span id="closeIcon" class="hidden">&times;</span> <!-- Close icon -->
+    </div>
+</header>
+
+<main>
+<section class="about">
+    <div class="about-header">
+        <h1>Helping you stay healthy, now and in the future</h1><hr><br>
+        <p>Discover our mission, vision, and the team behind Healthy Living Hub.</p>
+    </div>
+    <div class="about-content">
+        <div class="about-section">
+            <div class="about-image-container">
+                <img src="images/mission.jpg" alt="Our Mission" class="about-image">
+            </div>
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>Our mission is to inspire and empower individuals to live healthier lives through reliable information, practical advice, and a supportive community.</p>
+            </div>
+        </div>
+        <div class="about-section">
+            <div class="about-image-container">
+                <img src="images/vision.jpeg" alt="Our Vision" class="about-image">
+            </div>
+            <div class="about-text">
+                <h2>Our Vision</h2>
+                <p>We envision a world where everyone has the knowledge and tools to make informed decisions about their health and well-being.</p>
+            </div>
+        </div>
+        <div class="about-section">
+            <div class="about-image-container">
+                <img src="images/team.jpg" alt="Our Team" class="about-image">
+            </div>
+            <div class="about-text">
+                <h2>Meet the Team</h2>
+                <p>Our team is made up of dedicated health professionals, nutritionists, fitness experts, and wellness enthusiasts committed to bringing you the best content and resources.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <span id="copyright">&#169;</span>
+    <span id="currentyear"></span> 🎀 Richard Boniface Sam 🎀 Nigeria. 
+    <br>All rights reserved.
+    <p id="lastModified"></p>
+</footer>
+
+<script src="scripts/scripts.js" defer></script>  
+</body>
+</html>
