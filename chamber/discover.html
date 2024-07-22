@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Page PHcity CoC</title>
+    <meta name="description" content="WDD 231 - Web Frontend Development 1 | Richard Sam | Prerequisite course for Web and Computer Programming Certificate">
+    <meta name="author" content="Richard Sam">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Chamber of Commerce Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://facebook.com/images/image.jpg">
+    <meta property="og:url" content="https://facebook.com/page-url">
+
+
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Header Picture" class="header-image" width="70">
+        <h1>PHcity Chamber of Commerce</h1>
+
+        <button id="menu"></button>
+        <nav class="navigation">
+            <a href="index.html" title="Home" class="active">Home</a>
+            <a href="directory.html" title="Directory">Directory</a>
+            <a href="join.html" title="Join">Join</a>
+            <a href="#" target="_blank" title="Discover">Discover</a>
+        </nav>
+      
+    </header>
+
+    
+    
+    
+    <main>
+        <div class="hero">
+            <picture>
+                <!-- Add your source elements with media and srcset attributes -->
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <!-- Add fallback image for browsers that do not support picture element -->
+                <img src="images/hero-small.webp" alt="Chamber Places" width="500" height="250">
+            </picture>
+            <a href="#" class="keynote-button">Keynote Ticket</a>
+        </div>
+        <h1>Home</h1>
+        
+
+        <section>
+            <div class="events">
+                <div class="card">
+                    <div class="card-header"> 
+                        <h2>Events</h2>
+                    </div>
+                    <div class="card-content">
+                        <p><br><br></p>                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="current-weather">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Current Weather<span class="weather-icon"></span></h2>
+                        <!-- Moved the weather icon inside the h2 element -->
+                    </div>
+                    <a id="weather-icon-link" href="images/weather.svg">
+                        <img id="weather-icon" src="images/weather.svg" alt="Weather Icon">
+                    </a>
+                  
+                    <p><b>Temperature: </b><span id="current-temperature">26 °C</span></p>
+                    <p><b>Description: </b><span id="weather-description">Partly Cloudy</span></p>
+                    <p>High: <span id="high">85 °C</span></p>
+                    <p>Low: <span id="low">52 °C</span></p>
+                    <p>Humidity: <span id="humidity">34%</span></p>
+                    <p>Sunrise: <span id="sunrise">7:30 am</span></p>
+                    <p>Sunset: <span id="sunset">9:59 pm</span></p>
+                </div>   
+            </div>
+        
+            <div class="weather-forcast">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Weather Forecast</h2>
+                    </div><br>
+                    <div>
+                        <p><span id="forecast-day-1">90 °C, Clear</span></p>
+                        <p><span id="forecast-day-2">89 °C, Cloudy</span></p>
+                        <p><span id="forecast-day-3">69 °C, Rainy</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="spotlights">
+            <div class="card-sportlights">
+                <div class="card-header">
+                    <h2>Company Spotlights</h2>
+                </div>
+            </div>
+            <div id="spotlightsContainer" class="spotlights-container"></div>
+        </div>
+    </main>
+
+           
+    <footer>
+        <div>
+            <h3>PHcity Chamber of Commerce</h3>
+            <p>Plot 303 Danjuma Drive</p>
+            <p>info@phcity_coc.org</p>
+            <p>(+234)806-401-0818</p>
+        </div>
+
+        <div class="social-media">
+            <ul>
+                <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram" width="50"></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" width="50"></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="youtube" width="50"></a></li>
+                <li><a href="https://linkedIn.com" target="_blank"><img src="images/linkedin.png" alt="linkedIn" width="50"></a></li>
+                <!-- Add more social icons as needed -->
+            </ul>          
+        </div>
+
+
+        <div>
+            <h3>WDD231 Class Project</h3>
+            <p>Richard Boniface Sam</p>
+            <span id="copyright">&#169;</span>
+            <span id="currentyear"></span> PHcity Chamber of Commerce
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
