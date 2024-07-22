@@ -627,62 +627,6 @@ form input[type=submit]:hover {
 
 
 
-
-
-.sidebar {
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.sidebar h2 {
-  font-size: 1.2em;
-  color: #333;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 10px;
-}
-
-.visitor-message {
-  background-color: #e7f7fe;
-  border-left: 5px solid #007bff;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.visitor-message p {
-  margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .sidebar {
   padding: 20px;
   background-color: #f4f4f4;

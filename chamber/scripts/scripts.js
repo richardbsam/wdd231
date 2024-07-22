@@ -1,3 +1,96 @@
+
+
+// Directory PAge
+document.addEventListener('DOMContentLoaded', function() {
+  const lastVisitKey = 'lastVisit';
+  const visitorMessage = document.getElementById('visitor-message');
+  const now = Date.now();
+  const lastVisit = localStorage.getItem(lastVisitKey);
+
+  if (!lastVisit) {
+      visitorMessage.innerHTML = "<p>Welcome! Let us know if you have any questions.</p>";
+  } else {
+      const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+      if (daysSinceLastVisit < 1) {
+          visitorMessage.innerHTML = "<p>Back so soon! Awesome!</p>";
+      } else if (daysSinceLastVisit === 1) {
+          visitorMessage.innerHTML = "<p>You last visited 1 day ago.</p>";
+      } else {
+          visitorMessage.innerHTML = `<p>You last visited ${daysSinceLastVisit} days ago.</p>`;
+      }
+  }
+
+  localStorage.setItem(lastVisitKey, now);
+
+  // Simple Calendar
+  function generateCalendar() {
+      const calendar = document.getElementById('calendar');
+      const currentDate = new Date();
+      const month = currentDate.getMonth();
+      const year = currentDate.getFullYear();
+
+      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const firstDayIndex = new Date(year, month, 1).getDay();
+
+      let calendarHTML = `<div class="calendar-header">
+          <span>${monthNames[month]} ${year}</span>
+      </div>`;
+
+      calendarHTML += `<div class="calendar-days">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+      </div>`;
+
+      calendarHTML += `<div class="calendar-dates">`;
+
+      for (let i = 0; i < firstDayIndex; i++) {
+          calendarHTML += `<div class="empty-date"></div>`;
+      }
+
+      for (let day = 1; day <= daysInMonth; day++) {
+          calendarHTML += `<div class="date">${day}</div>`;
+      }
+
+      calendarHTML += `</div>`;
+      calendar.innerHTML = calendarHTML;
+  }
+
+  generateCalendar();
+
+  // Lazy loading images
+  const lazyImages = document.querySelectorAll('img.lazy');
+
+  const lazyLoad = (target) => {
+      const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  const img = entry.target;
+                  img.src = img.getAttribute('data-src');
+                  img.onload = () => img.classList.remove('lazy');
+                  io.unobserve(img);
+              }
+          });
+      });
+      io.observe(target);
+  };
+
+  lazyImages.forEach(lazyLoad);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //01 OpenWeatherMap API//
 document.addEventListener('DOMContentLoaded', () => {
   fetchWeather();
@@ -310,141 +403,5 @@ window.onclick = function(event) {
 
 
 
-// JavaScript for storing and displaying last visit date
-document.addEventListener('DOMContentLoaded', function() {
-  const lastVisitKey = 'lastVisit';
-  const visitorMessage = document.getElementById('visitor-message');
-  const now = Date.now();
-  const lastVisit = localStorage.getItem(lastVisitKey);
-
-  if (!lastVisit) {
-      visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
-  } else {
-      const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-      if (daysSinceLastVisit < 1) {
-          visitorMessage.textContent = "Back so soon! Awesome!";
-      } else if (daysSinceLastVisit === 1) {
-          visitorMessage.textContent = "You last visited 1 day ago.";
-      } else {
-          visitorMessage.textContent = `You last visited ${daysSinceLastVisit} days ago.`;
-      }
-  }
-
-  localStorage.setItem(lastVisitKey, now);
-});
 
 
-// JavaScript for storing and displaying last visit date
-document.addEventListener('DOMContentLoaded', function() {
-  const lastVisitKey = 'lastVisit';
-  const visitorMessage = document.getElementById('visitor-message');
-  const now = Date.now();
-  const lastVisit = localStorage.getItem(lastVisitKey);
-
-  if (!lastVisit) {
-      visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
-  } else {
-      const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-      if (daysSinceLastVisit < 1) {
-          visitorMessage.textContent = "Back so soon! Awesome!";
-      } else if (daysSinceLastVisit === 1) {
-          visitorMessage.textContent = "You last visited 1 day ago.";
-      } else {
-          visitorMessage.textContent = `You last visited ${daysSinceLastVisit} days ago.`;
-      }
-  }
-
-  localStorage.setItem(lastVisitKey, now);
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const lastVisitKey = 'lastVisit';
-  const visitorMessage = document.getElementById('visitor-message');
-  const now = Date.now();
-  const lastVisit = localStorage.getItem(lastVisitKey);
-
-  if (!lastVisit) {
-      visitorMessage.innerHTML = "<p>Welcome to the PHcity Chamber of Commerce! Let us know if you have any questions or need assistance.</p>";
-  } else {
-      const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-      if (daysSinceLastVisit < 1) {
-          visitorMessage.innerHTML = "<p>Welcome back! We’re glad to see you again so soon!</p>";
-      } else if (daysSinceLastVisit === 1) {
-          visitorMessage.innerHTML = "<p>It’s been a day! Welcome back!</p>";
-      } else {
-          visitorMessage.innerHTML = `<p>You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? 'day' : 'days'} ago. We're glad to have you back!</p>`;
-      }
-  }
-
-  localStorage.setItem(lastVisitKey, now);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const lastVisitKey = 'lastVisit';
-  const visitorMessage = document.getElementById('visitor-message');
-  const now = Date.now();
-  const lastVisit = localStorage.getItem(lastVisitKey);
-
-  if (!lastVisit) {
-      visitorMessage.innerHTML = "<p>Welcome to the PHcity Chamber of Commerce! Let us know if you have any questions or need assistance.</p>";
-  } else {
-      const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-      if (daysSinceLastVisit < 1) {
-          visitorMessage.innerHTML = "<p>Welcome back! We’re glad to see you again so soon!</p>";
-      } else if (daysSinceLastVisit === 1) {
-          visitorMessage.innerHTML = "<p>It’s been a day! Welcome back!</p>";
-      } else {
-          visitorMessage.innerHTML = `<p>You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? 'day' : 'days'} ago. We're glad to have you back!</p>`;
-      }
-  }
-
-  localStorage.setItem(lastVisitKey, now);
-
-  // Simple Calendar
-  function generateCalendar() {
-      const calendar = document.getElementById('calendar');
-      const currentDate = new Date();
-      const month = currentDate.getMonth();
-      const year = currentDate.getFullYear();
-
-      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
-      const firstDayIndex = new Date(year, month, 1).getDay();
-      
-      let calendarHTML = `<div class="calendar-header">
-          <span>${monthNames[month]} ${year}</span>
-      </div>`;
-      
-      calendarHTML += `<div class="calendar-days">
-          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-      </div>`;
-      
-      calendarHTML += `<div class="calendar-dates">`;
-
-      for (let i = 0; i < firstDayIndex; i++) {
-          calendarHTML += `<div class="empty-date"></div>`;
-      }
-
-      for (let day = 1; day <= daysInMonth; day++) {
-          calendarHTML += `<div class="date">${day}</div>`;
-      }
-
-      calendarHTML += `</div>`;
-      calendar.innerHTML = calendarHTML;
-  }
-
-  generateCalendar();
-});
