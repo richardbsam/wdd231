@@ -3,17 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Page PHcity CoC</title>
-    <meta name="description" content="WDD 231 - Web Frontend Development 1 | Richard Sam | Prerequisite course for Web and Computer Programming Certificate">
+    <title>Discover - PHcity Chamber of Commerce</title>
+    <meta name="description" content="Discover the attractions, events, and more about PHcity Chamber of Commerce.">
     <meta name="author" content="Richard Sam">
-
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="Chamber of Commerce Website">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://facebook.com/images/image.jpg">
-    <meta property="og:url" content="https://facebook.com/page-url">
-
-
     <link rel="stylesheet" href="styles/styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,91 +18,78 @@
     <header>
         <img src="images/logo.png" alt="Header Picture" class="header-image" width="70">
         <h1>PHcity Chamber of Commerce</h1>
-
         <button id="menu"></button>
         <nav class="navigation">
-            <a href="index.html" title="Home" class="active">Home</a>
+            <a href="index.html" title="Home">Home</a>
             <a href="directory.html" title="Directory">Directory</a>
             <a href="join.html" title="Join">Join</a>
-            <a href="#" target="_blank" title="Discover">Discover</a>
+            <a href="discover.html" target="_blank" title="Discover" class="active">Discover</a>
         </nav>
-      
     </header>
 
-    
-    
-    
     <main>
-        <div class="hero">
-            <picture>
-                <!-- Add your source elements with media and srcset attributes -->
-                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
-                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
-                <!-- Add fallback image for browsers that do not support picture element -->
-                <img src="images/hero-small.webp" alt="Chamber Places" width="500" height="250">
-            </picture>
-            <a href="#" class="keynote-button">Keynote Ticket</a>
-        </div>
-        <h1>Home</h1>
-        
-
-        <section>
-            <div class="events">
-                <div class="card">
-                    <div class="card-header"> 
-                        <h2>Events</h2>
-                    </div>
-                    <div class="card-content">
-                        <p><br><br></p>                      
-                    </div>
+        <div class="grid-container">
+         
+            <aside class="sidebar">
+                <h2>Visitor Information</h2>
+                <div id="visitor-message" class="visitor-message"></div>
+                
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li><strong>Business Networking Mixer:</strong> Join us for an evening of networking and collaboration. Date: 15th August</li>
+                    <li><strong>Community Workshop:</strong> Learn about sustainable business practices. Date: 22nd August</li>
+                    <li><strong>Annual General Meeting:</strong> Discuss the future of PHcity Chamber. Date: 30th August</li>
+                </ul>
+            
+                <h2>Local Attractions</h2>
+                <ul>
+                    <li><strong>PHcity Museum:</strong> Explore our rich history and culture.</li>
+                    <li><strong>Riverside Park:</strong> A beautiful spot for relaxation and recreation.</li>
+                    <li><strong>Central Market:</strong> Discover local crafts and fresh produce.</li>
+                </ul>
+                
+                <h2>Community Statistics</h2>
+                <ul>
+                    <li><strong>Population:</strong> 1.2 Million residents.</li>
+                    <li><strong>Businesses:</strong> Over 5,000 registered enterprises.</li>
+                    <li><strong>Tourist Visitors:</strong> Approximately 200,000 annually.</li>
+                </ul>
+                <h2>Calendar</h2>
+                <div class="calendar" id="calendar"></div>
+            </aside>
+            
+            <section class="main-content">
+                <h2>Local Photos of Interest</h2>
+                <div class="photo-gallery">
+                    <figure>
+                        <img src="images/photo1.jpg" alt="Photo 1" loading="lazy">
+                        <figcaption>Events and Networking</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo2.jpg" alt="Photo 2" loading="lazy">
+                        <figcaption>Business Practices and Workshops</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo3.jpg" alt="Photo 3" loading="lazy">
+                        <figcaption>Spot for relaxations and Recreation</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo4.jpg" alt="Photo 4" loading="lazy">
+                        <figcaption>Rich history of Arts and Cuture</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo5.jpg" alt="Photo 5" loading="lazy">
+                        <figcaption>Meetings and Discussion </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo6.jpg" alt="Photo 6" loading="lazy">
+                        <figcaption>Entertainments and Rich Foods</figcaption>
+                    </figure>
                 </div>
-            </div>
-
-            <div class="current-weather">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Current Weather<span class="weather-icon"></span></h2>
-                        <!-- Moved the weather icon inside the h2 element -->
-                    </div>
-                    <a id="weather-icon-link" href="images/weather.svg">
-                        <img id="weather-icon" src="images/weather.svg" alt="Weather Icon">
-                    </a>
-                  
-                    <p><b>Temperature: </b><span id="current-temperature">26 °C</span></p>
-                    <p><b>Description: </b><span id="weather-description">Partly Cloudy</span></p>
-                    <p>High: <span id="high">85 °C</span></p>
-                    <p>Low: <span id="low">52 °C</span></p>
-                    <p>Humidity: <span id="humidity">34%</span></p>
-                    <p>Sunrise: <span id="sunrise">7:30 am</span></p>
-                    <p>Sunset: <span id="sunset">9:59 pm</span></p>
-                </div>   
-            </div>
-        
-            <div class="weather-forcast">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Weather Forecast</h2>
-                    </div><br>
-                    <div>
-                        <p><span id="forecast-day-1">90 °C, Clear</span></p>
-                        <p><span id="forecast-day-2">89 °C, Cloudy</span></p>
-                        <p><span id="forecast-day-3">69 °C, Rainy</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="spotlights">
-            <div class="card-sportlights">
-                <div class="card-header">
-                    <h2>Company Spotlights</h2>
-                </div>
-            </div>
-            <div id="spotlightsContainer" class="spotlights-container"></div>
+            </section>
         </div>
     </main>
 
-           
     <footer>
         <div>
             <h3>PHcity Chamber of Commerce</h3>
@@ -117,18 +97,14 @@
             <p>info@phcity_coc.org</p>
             <p>(+234)806-401-0818</p>
         </div>
-
         <div class="social-media">
             <ul>
                 <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram" width="50"></a></li>
                 <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" width="50"></a></li>
                 <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="youtube" width="50"></a></li>
                 <li><a href="https://linkedIn.com" target="_blank"><img src="images/linkedin.png" alt="linkedIn" width="50"></a></li>
-                <!-- Add more social icons as needed -->
             </ul>          
         </div>
-
-
         <div>
             <h3>WDD231 Class Project</h3>
             <p>Richard Boniface Sam</p>
@@ -137,5 +113,6 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+
 </body>
 </html>
