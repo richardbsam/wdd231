@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page PHcity CoC</title>
+    <title>Home Sequence PetHub</title>
     <meta name="description" content="WDD 231 - Web Frontend Development 1 | Richard Sam | Prerequisite course for Web and Computer Programming Certificate">
     <meta name="author" content="Richard Sam">
 
@@ -22,15 +22,15 @@
 
 <body>
     <header>
-        <img src="images/logo.jpg" alt="Header Picture" class="header-image" width="200">
-        <h1>Sequence</h1>
+        <img src="images/logo.png" alt="Header Picture" class="header-image" width="100">
+        <h1>Sequence PetHub</h1>
 
         <button id="menu"></button>
 
         <nav class="navigation">
             <a href="index.html" title="Home" class="active">Home</a>
             <a href="services.html" title="Services">Services</a>
-            <a href="directory.html" title="Directory">Pet Directory</a>
+            <a href="directory.html" title="Directory">Directory</a>
             <a href="gallery.html" title="Gallery">Gallery</a>
             <a href="contact.html" title="Contact">Contact Us</a>
         </nav>     
@@ -43,9 +43,9 @@
                 <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
                 <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
                 <!-- Add fallback image for browsers that do not support picture element -->
-                <img src="images/hero-small.webp" alt="Chamber Places" width="500" height="250">
+                <img src="images/hero-small.webp" alt="project place" width="500" height="250">
             </picture>
-            <a href="#" class="keynote-button">Keynote Ticket</a>
+            <a href="contact.html" class="keynote-button">Contact Us</a>
         </div>
         <h1>Home</h1>
         
@@ -58,34 +58,20 @@
 
         <div class="articles">
             <article>
-                <h3>Nutrition Tips</h3>
-                <p>Learn how to eat healthier with our nutrition tips.</p>
-                <img src="images/nutrition.jpg" alt="Healthy food" loading="lazy">
+                <h3>Grooming</h3>
+                <p>Professional grooming services.This includes bathing, brushing, and nail trimming.</p><br>
+                <img src="images/grooming1.jpg" alt="Grooming" loading="lazy">
+                
             </article>
             <article>
-                <h3>Exercise Routines</h3>
-                <p>Discover effective exercises to stay fit and healthy.</p>
-                <img src="images/exercise.jpg" alt="Exercise" loading="lazy">
+                <h3>Training</h3>
+                <p>Comprehensive training programs to help your pet learn obedience and behavioral skills.</p><br>
+                <img src="images/training.jpg" alt="Training" loading="lazy">
             </article>
             <article>
-                <h3>Mental Well-being</h3>
-                <p>Improve your mental health with our well-being advice.</p>
-                <img src="images/mental-wellbeing.jpg" alt="Mental well-being" loading="lazy">
-            </article>
-            <article>
-                <h3>Physical Health</h3>
-                <p>Improve your physical health with our health tips and advice.</p>
-                <img src="images/physical-health.jpg" alt="Healthy food" loading="lazy">
-            </article>
-            <article>
-                <h3>Home Care</h3>
-                <p>Discover our effective home care program to stay fit and healthy.</p>
-                <img src="images/home-care.jpg" alt="Exercise" loading="lazy">
-            </article>
-            <article>
-                <h3>Relaxation Tips</h3>
-                <p>Learn more on relaxation tips to improve your overall Well-being.</p>
-                <img src="images/relaxation.jpg" alt="Mental well-being" loading="lazy">
+                <h3>Veterinary Care</h3>
+                <p>Professional Health check-ups and medical care provided by certified veterinarians.</p><br>
+                <img src="images/vetcare.jpg" alt="Healthy food" loading="lazy">
             </article>
         </div>
 
@@ -94,14 +80,19 @@
             <div class="events">
                 <div class="card">
                     <div class="card-header"> 
-                        <h2>Events</h2>
+                        <h2>Upcoming Events</h2>
                     </div>
                     <div class="card-content">
-                        <p><br><br></p>                      
+                        <ul>
+                            <li><strong>Business Networking Mixer:</strong> Join us for an evening of networking and collaboration. Date: 15th August</li>
+                            <li><strong>Community Workshop:</strong> Learn about sustainable business practices. Date: 22nd August</li>
+                            <li><strong>Annual General Meeting:</strong> Discuss the future of PHcity Chamber. Date: 30th August</li>
+                        </ul>
+                        <p>                     
                     </div>
                 </div>
             </div>
-
+            
             <div class="current-weather">
                 <div class="card">
                     <div class="card-header">
@@ -135,6 +126,7 @@
                 </div>
             </div>
         </section>
+    </main>
 
     <footer>
         <div>
@@ -143,18 +135,14 @@
             <p>info@phcity_coc.org</p>
             <p>(+234)806-401-0818</p>
         </div>
-
         <div class="social-media">
             <ul>
-                <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram" width="50"></a></li>
+                <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram" width="50"></a></li>
                 <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" width="50"></a></li>
-                <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="youtube" width="50"></a></li>
-                <li><a href="https://linkedIn.com" target="_blank"><img src="images/linkedin.png" alt="linkedIn" width="50"></a></li>
-                <!-- Add more social icons as needed -->
+                <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="YouTube" width="50"></a></li>
+                <li><a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" width="50"></a></li>
             </ul>          
         </div>
-
-
         <div>
             <h3>WDD231 Class Project</h3>
             <p>Richard Boniface Sam</p>
@@ -163,5 +151,8 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+
+
+   
 </body>
 </html>
