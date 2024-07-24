@@ -22,7 +22,7 @@
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Header Picture" class="header-image" width="100">
+        <img src="images/logo.png" alt="Header Picture" class="header-image" width="80">
         <h1>Sequence PetHub</h1>
 
      
@@ -42,77 +42,68 @@
         <form method="GET" action="thankyou.html" class="designOne">
             <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
             <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-            <label for="organization-title">Organizational Title</label>
+
             
-            <label for="organization-title"></label>
-            <input type="text" id="organization-title" name="organization-title" 
-                   autocomplete="organization-title" 
-                   pattern="[A-Za-z\s-]{7,}" 
-                   title="Please enter at least 7 characters. Only letters, hyphens, and spaces are allowed.">
+           
             
             <label>Email <input type="email" name="email" required autocomplete="email" placeholder="sam123@gmail.com" title="Your Email"></label>
             <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="234-801234-5678"></label>
-            <label>Business Organisation Name <input type="text" name="business" required autocomplete="organization" title="Your Organisation Name" placeholder="XYZ Company Ltd"></label>
+            <label>Home Address <input type="text" name="business" required autocomplete="organization" title="Your Organisation Name" placeholder="Optional"></label>
 
-            <h3>Membership Level</h3>
+            <h3>Select Our Services</h3>
             <label>
                 <input type="radio" name="membership" value="NP Membership" required title="Select NP Membership">
-                NP Membership (No fee for non-profit organizations)
+                Pet Training
             </label>
             <label>
                 <input type="radio" name="membership" value="Bronze" required title="Select Bronze Membership">
-                Bronze Membership
+                Pet Grooming
             </label>
             <label>
                 <input type="radio" name="membership" value="Silver" required title="Select Silver Membership">
-                Silver Membership
+               Vetinary Services
             </label>
             <label>
                 <input type="radio" name="membership" value="Gold" required title="Select Gold Membership">
-                Gold Membership
+                Other Products
             </label><br>
             
-            <button type="button" onclick="openModal()">Learn More About Membership Levels</button>
+            <button type="button" onclick="openModal()">View Lists of Our Services & Products</button>
 
             <div id="membershipModal" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal()">&times;</span>
                     
-                    <h2>Membership Benefits</h2>
                     
-                    <h3>NP Membership</h3>
-                    <ul>
-                        <li>For non-profit organizations and there is no fee</li>
-                    </ul>
-                       
-                    <h3>Bronze Membership</h3>
-                    <ul>
-                        <li>15% discount on events</li> 
-                        <li>10% discount on advertising</li> 
-                        <li>Fee of NGN50,000/month</li>
-                    </ul>
-            
-                    <h3>Silver Membership</h3>
-                    <ul>
-                        <li>25% discount on events</li>
-                        <li>15% discount on advertising</li>
-                        <li>Free participation in the trade fair</li>
-                        <li>Fee of NGN100,000/month</li>
-                    </ul>
                     
-                    <h3>Gold Membership</h3>
+                    
+                    <h2>Lists of Our Services & Products</h2>
+
+                    <h3>Grooming</h3>
                     <ul>
-                        <li>50% discount on events</li> 
-                        <li>50% discount on advertising</li> 
-                        <li>Free participation in the trade fair</li> 
-                        <li>5 free featured ads per year</li> 
-                        <li>1 free training per quarter</li> 
-                        <li>Fee of NGN250,000/month</li>
+                        <li><strong>Description:</strong> Professional grooming services to keep your pet looking their best. This includes bathing, brushing, and nail trimming.</p>
+                        <li><strong>Pricing:</strong> NGN50,000 per session</li>
+                        <li><strong>Benefits:</strong> Keeps your pet clean, reduces shedding, and prevents matting.</li>
+                    </ul>
+
+                    <h3>Training</h3>
+                    <ul>
+                        <li><strong>Description:</strong> Comprehensive training programs to help your pet learn obedience and behavioral skills.</li>
+                        <li><strong>Pricing:</strong> NGN20,000 for a 5-session package</li>
+                        <li><strong>Benefits:</strong> Enhances your pet's behavior and strengthens your bond with them.</li>
+                    </ul>
+    
+        
+                    <h3>Veterinary Care</h3>
+                    <ul>
+                         <li><strong>Description:</strong> Health check-ups and medical care provided by certified veterinarians.</p>
+                         <li><strong>Pricing:</strong> NGN10,000 per consultation</p>
+                         <li><strong>Benefits:</strong> Ensures your pet is healthy and up-to-date with vaccinations.</p>
                     </ul>
                 </div>
             </div>            
             
-            <h3>Business/Organization's Description </h3>
+            <h3>Comments</h3>
             <label class="myinput">
                 <textarea name="description" cols="40" rows="8" title="Describe your organization"></textarea>
             </label>

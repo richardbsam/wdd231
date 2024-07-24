@@ -250,7 +250,8 @@ article img {
 }
 
 .card-content {
-  padding: 0px 10px;
+  padding: 0px 30px;
+  font-size: small;
 }
 
 .card p {
