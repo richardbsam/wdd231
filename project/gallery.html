@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - PHcity Chamber of Commerce</title>
+    <meta name="description" content="Discover the attractions, events, and more about PHcity Chamber of Commerce.">
+    <meta name="author" content="Richard Sam">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="scripts/scripts.js" defer></script>
+    <!-- Include Calendar API script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    // Example event data, replace with dynamic data if needed
+                    { title: 'Grooming Appointment', start: '2024-08-01' },
+                    { title: 'Training Session', start: '2024-08-05' }
+                ]
+            });
+            calendar.render();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Header Picture" class="header-image" width="200">
+        <h1>Sequence</h1>
+
+        <button id="menu"></button>
+      
+
+        <nav class="navigation">
+            <a href="index.html" title="Home">Home</a>
+            <a href="services.html" title="Services">Services</a>
+            <a href="directory.html" title="Directory">Pet Directory</a>
+            <a href="gallery.html" title="Gallery" class="active">Gallery</a>
+            <a href="contact.html" title="Contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Gallery</h1>
+
+        
+
+        <div class="grid-container">
+            <aside class="sidebar">
+                <h2>Visitor Information</h2>
+                <div id="visitor-message" class="visitor-message"></div>
+                
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li><strong>Business Networking Mixer:</strong> Join us for an evening of networking and collaboration. Date: 15th August</li>
+                    <li><strong>Community Workshop:</strong> Learn about sustainable business practices. Date: 22nd August</li>
+                    <li><strong>Annual General Meeting:</strong> Discuss the future of PHcity Chamber. Date: 30th August</li>
+                </ul>
+            
+                <h2>Local Attractions</h2>
+                <ul>
+                    <li><strong>PHcity Museum:</strong> Explore our rich history and culture.</li>
+                    <li><strong>Riverside Park:</strong> A beautiful spot for relaxation and recreation.</li>
+                    <li><strong>Central Market:</strong> Discover local crafts and fresh produce.</li>
+                </ul>
+                
+                <h2>Community Statistics</h2>
+                <ul>
+                    <li><strong>Population:</strong> 1.2 Million residents.</li>
+                    <li><strong>Businesses:</strong> Over 5,000 registered enterprises.</li>
+                    <li><strong>Tourist Visitors:</strong> Approximately 200,000 annually.</li>
+                </ul>
+                <h2>Calendar</h2>
+                <div class="calendar" id="calendar"></div>
+            </aside>
+            
+            <section class="main-content">
+                <h2>Local Photos of Interest</h2>
+                <div class="photo-gallery">
+                    <figure>
+                        <img src="images/photo1.jpg" alt="Photo 1" loading="lazy">
+                        <figcaption>Events and Networking</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo2.jpg" alt="Photo 2" loading="lazy">
+                        <figcaption>Business Practices and Workshops</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo3.jpg" alt="Photo 3" loading="lazy">
+                        <figcaption>Spot for Relaxation and Recreation</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo4.jpg" alt="Photo 4" loading="lazy">
+                        <figcaption>Rich History of Arts and Culture</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo5.jpg" alt="Photo 5" loading="lazy">
+                        <figcaption>Meetings and Discussions</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/photo6.jpg" alt="Photo 6" loading="lazy">
+                        <figcaption>Entertainment and Rich Foods</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h3>PHcity Chamber of Commerce</h3>
+            <p>Plot 303 Danjuma Drive</p>
+            <p>info@phcity_coc.org</p>
+            <p>(+234)806-401-0818</p>
+        </div>
+        <div class="social-media">
+            <ul>
+                <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram" width="50"></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" width="50"></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="YouTube" width="50"></a></li>
+                <li><a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" width="50"></a></li>
+            </ul>          
+        </div>
+        <div>
+            <h3>WDD231 Class Project</h3>
+            <p>Richard Boniface Sam</p>
+            <span id="copyright">&#169;</span>
+            <span id="currentyear"></span> PHcity Chamber of Commerce
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

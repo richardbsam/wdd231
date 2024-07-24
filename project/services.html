@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - PHcity Chamber of Commerce</title>
+    <meta name="description" content="Discover the attractions, events, and more about PHcity Chamber of Commerce.">
+    <meta name="author" content="Richard Sam">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+   
+    <script src="scripts/scripts.js" defer></script>
+   
+    <!-- Include Calendar API script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    // Example event data, replace with dynamic data if needed
+                    { title: 'Grooming Appointment', start: '2024-08-01' },
+                    { title: 'Training Session', start: '2024-08-05' }
+                ]
+            });
+            calendar.render();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Header Picture" class="header-image" width="200">
+        <h1>Sequence</h1>
+
+        <button id="menu"></button>
+      
+        <nav class="navigation">
+            <a href="index.html" title="Home">Home</a>
+            <a href="services.html" title="Services" class="active">Services</a>
+            <a href="directory.html" title="Directory">Pet Directory</a>
+            <a href="gallery.html" title="Gallery">Gallery</a>
+            <a href="contact.html" title="Contact">Contact Us</a>
+        </nav>   
+    </header>
+
+    <main>
+        <h1>Explore Our Services</h1>
+
+        <article class="intro-article">
+            <header>
+                <h2>Services We Offer</h2>
+                <p>We provide a range of services for your pets including grooming, training, and veterinary care. Each service is tailored to ensure the well-being and happiness of your pet. Below are the details, pricing, and benefits for each service.</p>
+            </header>
+        </article>
+
+        <section class="services-section">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Grooming</h3>
+                <p><strong>Description:</strong> Professional grooming services to keep your pet looking their best. This includes bathing, brushing, and nail trimming.</p>
+                <p><strong>Pricing:</strong> $50 per session</p>
+                <p><strong>Benefits:</strong> Keeps your pet clean, reduces shedding, and prevents matting.</p>
+            </div>
+            <div class="service">
+                <h3>Training</h3>
+                <p><strong>Description:</strong> Comprehensive training programs to help your pet learn obedience and behavioral skills.</p>
+                <p><strong>Pricing:</strong> $100 for a 5-session package</p>
+                <p><strong>Benefits:</strong> Enhances your pet's behavior and strengthens your bond with them.</p>
+            </div>
+            <div class="service">
+                <h3>Veterinary Care</h3>
+                <p><strong>Description:</strong> Health check-ups and medical care provided by certified veterinarians.</p>
+                <p><strong>Pricing:</strong> $75 per consultation</p>
+                <p><strong>Benefits:</strong> Ensures your pet is healthy and up-to-date with vaccinations.</p>
+            </div>
+
+            <h2>Book an Appointment</h2>
+            <form id="booking-form" action="submit_booking.php" method="post">
+                <label for="service">Select Service:</label>
+                <select id="service" name="service">
+                    <option value="grooming">Grooming</option>
+                    <option value="training">Training</option>
+                    <option value="vet">Veterinary Care</option>
+                </select>
+
+                <label for="date">Choose Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Choose Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <input type="submit" value="Book Appointment">
+            </form>
+        </section>
+
+      
+    </main>
+
+    <footer>
+        <div>
+            <h3>PHcity Chamber of Commerce</h3>
+            <p>Plot 303 Danjuma Drive</p>
+            <p>info@phcity_coc.org</p>
+            <p>(+234)806-401-0818</p>
+        </div>
+        <div class="social-media">
+            <ul>
+                <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram" width="50"></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" width="50"></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="YouTube" width="50"></a></li>
+                <li><a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" width="50"></a></li>
+            </ul>          
+        </div>
+        <div>
+            <h3>WDD231 Class Project</h3>
+            <p>Richard Boniface Sam</p>
+            <span id="copyright">&#169;</span>
+            <span id="currentyear"></span> PHcity Chamber of Commerce
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

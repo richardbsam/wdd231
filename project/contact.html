@@ -1,80 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Us - Healthy LivingHub</title>
-        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Richard Sam | Prerequisite course for web development">
-        <meta name="author" content="Richard Sam">
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/styles-large.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <h1>Healthy LivingHub</h1>
-            <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html" title="About">About Us</a>
-                <a href="contact.html" title="Contact">Contact Us</a> 
-            </nav>
-            <div class="hamburger" onclick="toggleNav()">
-                <span id="hamburgerIcon">&#9776;</span> <!-- Hamburger icon -->
-                <span id="closeIcon" class="hidden">&times;</span> <!-- Close icon -->
-            </div>
-        </header>
-        <main>
-            <div class="about-header">
-                <h1>Contact Healthy LivingHub</h1>
-                <hr>
-                <br>
-                <p>Whether you’re an existing customer, or you’re interested in joining us, you can find out the best way to contact us here.</p>
-            </div>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br><br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <br><br>
-                <button type="submit">Submit</button>
-            </form>
-            <br>
-            <div class="social-media">
-               <br><br><br> <h2>Connect with Us</h2>
-                <a href="https://www.whatsapp.com" target="_blank">
-                    <img src="images/whatsapp.png" alt="whatsapp">
-                </a>
-                <a href="https://www.facebook.com/richard.b.sam" target="_blank">
-                    <img src="images/facebook.png" alt="Facebook">
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                    <img src="images/twitter.png" alt="Twitter">
-                </a>
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="images/instagram.png" alt="Instagram">
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                    <img src="images/youtube.png" alt="YouTube">
-                </a>
-            </div>
-        </main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join PHcity CoC</title>
+    <meta name="description" content="WDD 231 - Web Frontend Development 1 | Richard Sam | Prerequisite course for Web and Computer Programming Certificate">
+    <meta name="author" content="Richard Sam">
 
-        <footer>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Chamber of Commerce Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://facebook.com/images/image.jpg">
+    <meta property="og:url" content="https://facebook.com/page-url">
+
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Header Picture" class="header-image" width="200">
+        <h1>Sequence</h1>
+     
+        <button id="menu"></button>
+        <nav class="navigation">
+            <a href="index.html" title="Home" >Home</a>
+            <a href="services.html" title="Services">Services</a>
+            <a href="directory.html" title="Directory">Pet Directory</a>
+            <a href="gallery.html" title="Gallery">Gallery</a>
+            <a href="contact.html" title="Contact" class="active">Contact Us</a>
+        </nav>   
+       
+    </header>
+    <main>
+        <h1>Contact Us!</h1>
+
+        <form method="GET" action="thankyou.html" class="designOne">
+            <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label for="organization-title">Organizational Title</label>
+            
+            <label for="organization-title"></label>
+            <input type="text" id="organization-title" name="organization-title" 
+                   autocomplete="organization-title" 
+                   pattern="[A-Za-z\s-]{7,}" 
+                   title="Please enter at least 7 characters. Only letters, hyphens, and spaces are allowed.">
+            
+            <label>Email <input type="email" name="email" required autocomplete="email" placeholder="sam123@gmail.com" title="Your Email"></label>
+            <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="234-801234-5678"></label>
+            <label>Business Organisation Name <input type="text" name="business" required autocomplete="organization" title="Your Organisation Name" placeholder="XYZ Company Ltd"></label>
+
+            <h3>Membership Level</h3>
+            <label>
+                <input type="radio" name="membership" value="NP Membership" required title="Select NP Membership">
+                NP Membership (No fee for non-profit organizations)
+            </label>
+            <label>
+                <input type="radio" name="membership" value="Bronze" required title="Select Bronze Membership">
+                Bronze Membership
+            </label>
+            <label>
+                <input type="radio" name="membership" value="Silver" required title="Select Silver Membership">
+                Silver Membership
+            </label>
+            <label>
+                <input type="radio" name="membership" value="Gold" required title="Select Gold Membership">
+                Gold Membership
+            </label><br>
+            
+            <button type="button" onclick="openModal()">Learn More About Membership Levels</button>
+
+            <div id="membershipModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    
+                    <h2>Membership Benefits</h2>
+                    
+                    <h3>NP Membership</h3>
+                    <ul>
+                        <li>For non-profit organizations and there is no fee</li>
+                    </ul>
+                       
+                    <h3>Bronze Membership</h3>
+                    <ul>
+                        <li>15% discount on events</li> 
+                        <li>10% discount on advertising</li> 
+                        <li>Fee of NGN50,000/month</li>
+                    </ul>
+            
+                    <h3>Silver Membership</h3>
+                    <ul>
+                        <li>25% discount on events</li>
+                        <li>15% discount on advertising</li>
+                        <li>Free participation in the trade fair</li>
+                        <li>Fee of NGN100,000/month</li>
+                    </ul>
+                    
+                    <h3>Gold Membership</h3>
+                    <ul>
+                        <li>50% discount on events</li> 
+                        <li>50% discount on advertising</li> 
+                        <li>Free participation in the trade fair</li> 
+                        <li>5 free featured ads per year</li> 
+                        <li>1 free training per quarter</li> 
+                        <li>Fee of NGN250,000/month</li>
+                    </ul>
+                </div>
+            </div>            
+            
+            <h3>Business/Organization's Description </h3>
+            <label class="myinput">
+                <textarea name="description" cols="40" rows="8" title="Describe your organization"></textarea>
+            </label>
+            
+            <input type="hidden" name="timestamp" id="timestamp" value="">
+            <input type="submit" value="Submit Form">
+        </form>
+
+    </main>
+
+    <footer>
+        <div>
+            <h3>PHcity Chamber of Commerce</h3>
+            <p>Plot 303 Danjuma Drive</p>
+            <p>info@phcity_coc.org</p>
+            <p>(+234)806-401-0818</p>
+        </div>
+
+        <div class="social-media">
+            <ul>
+                <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram" width="50"></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" width="50"></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="youtube" width="50"></a></li>
+                <li><a href="https://linkedIn.com" target="_blank"><img src="images/linkedin.png" alt="linkedIn" width="50"></a></li>
+                <!-- Add more social icons as needed -->
+            </ul>          
+        </div>
+
+        <div>
+            <h3>WDD231 Class Project</h3>
+            <p>Richard Boniface Sam</p>
             <span id="copyright">&#169;</span>
-            <span id="currentyear"></span> 🎀 Richard Boniface Sam 🎀 Nigeria. 
-            <br>All rights reserved.
+            <span id="currentyear"></span> PHcity Chamber of Commerce
             <p id="lastModified"></p>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="scripts/scripts.js" defer></script>
-    </body>
+    
+</body>
 </html>

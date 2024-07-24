@@ -1,0 +1,82 @@
+[
+    {
+      "name": "Tethys-Plantgeria Ltd",
+      "tagLine": "Diving & Marine Contractors",
+      "address": "Plot 303, Danjuma Drive, Trans Amadi Ind. Layout, Phase 2, Port Harcourt.",
+      "email": "info@tethys-plantgeria.com",
+      "phone": "+2348159913982",
+      "website": "http://www.tethys-plantgeria.com",
+      "image": "images/tethys-logo.png",
+      "membershipLevel": 1,
+      "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "name": "Oromena Limited",
+      "tagLine": "#1 in offering services to Engineering, Marine and Oil & Gas Sectors",
+      "address": "B-Block Suit 1 Akpos Marine Jetty Abuloma, Port Harcourt , Rivers State",
+      "email": "info@oromena.com",
+      "phone": "+234-8063421371",
+      "website": "https://oromena.com",
+      "image": "images/oromena-logo.png",
+      "membershipLevel": 2,
+      "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+
+    {
+      "name": "Weltek Limited", 
+      "tagLine": "Engineering, Procurement, and Construction",
+      "address": "Plot 307 Danjuma Drive, Trans Amadi, Port Harcourt, Rivers State, Nigeria.",
+      "email": "info@weltekng.com",
+      "phone": "+2342084652185",
+      "website": "https://weltekng.com",
+      "image": "images/weltek-logo.png",
+      "membershipLevel": 1,
+      "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "name": "Danelec Ltd",
+      "tagLine": "Electrical/Electronic Engineering Construction & Services",
+      "address": "Plot 303, Danjuma Drive, Trans Amadi Ind. Layout, Phase 2, Port Harcourt.",
+      "email": "info@danelec-ltd.com",
+      "phone": "+234-8033103782",
+      "website": "http://www.danelec-ltd.com",
+      "image": "images/danelecltd-logo.png",
+      "membershipLevel": 1,
+      "otherInfo": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "name": "Plantgeria Company Limited",
+      "tagLine": "Engineering and Logistics services provider",
+      "address": "Plot # 303, Danjuma Drive, Trans Amadi Ind. Layout, Phase 2, Port Harcourt.",
+      "email": "info@plantgeria.com",
+      "phone": "123-456-7890",
+      "website": "https://www.plantgeria.com/",
+      "image": "images/plantgeria-logo.png",
+      "membershipLevel": 2,
+      "otherInfo": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "name": "Eunisell Nigeria Ltd",
+      "tagLine": "Chemicals and Engineering Solutions Providers",
+      "address": "49/51 Danjuma Drive, Trans Amadi Industrial Layout",
+      "email": "info@eunisell.com",
+      "phone": "+234-9087659940",
+      "website": "https://eunisell.com",
+      "image": "images/eunisell-logo.png",
+      "membershipLevel": 3,
+      "otherInfo": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    {
+      "name": "FEIMA Group Limited",
+      "tagLine": "Marine, Civil, Construction and Infrastructural solutions",
+      "address": "24 Danjuma Drive, Off Peter Odili Road, Trans-Amadi, Port-Harcourt, Rivers State.",
+      "email": "info@feimagrouplimited.com",
+      "phone": "+234-8039008100-9",
+      "website": "https://feimagrouplimited.com",
+      "image": "images/feima-logo.png",
+      "membershipLevel": 1,
+      "otherInfo": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+    }
+  ]
+  
+
