@@ -159,12 +159,11 @@ main {
   right: 20px; /* Adjust as needed */
   background-color: #5f2b0d;
   color: #fff;
-  padding: 10px 30px;
+  padding: 5px 15px;
   text-decoration: none;
-  border-radius: 10px;
-  font-size: 18px;
+  border-radius: 5px;
+  font-size: 12px;
   font-weight: bold;
-
 }
 
 .keynote-button:hover {
@@ -615,7 +614,28 @@ form input[type=submit]:hover {
 
 
 @media screen and (min-width: 640px) {
-
+  
+  
+  .keynote-button {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: #5f2b0d;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .keynote-button:hover {
+    background-color: #556e19;
+  }
+  
+ 
+ 
+ 
   .hamburger {
     display: none; /* Initially hidden */
   }
