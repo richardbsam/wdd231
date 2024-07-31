@@ -1,6 +1,6 @@
 
 
-// Directory PAge
+// Directory Page
 document.addEventListener('DOMContentLoaded', function() {
   const lastVisitKey = 'lastVisit';
   const visitorMessage = document.getElementById('visitor-message');

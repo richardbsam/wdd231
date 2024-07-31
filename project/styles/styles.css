@@ -194,7 +194,7 @@ article {
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 5px;
-  background-color: #f9f9f9; /* Light grey background for better contrast */
+  background-color: whitesmoke; /* Light grey background for better contrast */
   line-height: 1.5;
 }
 
@@ -547,12 +547,13 @@ form input:required:valid {
 form input[type=submit] {
   border: none;
   text-align: center;
-  background-color: #382202;
+  background-color:#5f2b0d;
   color: white;
   border-radius: 0.25rem;
   padding: 0.5rem 0.5rem;
   margin: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
   -webkit-appearance: none;
   appearance: none;      
 }
