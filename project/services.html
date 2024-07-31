@@ -82,45 +82,57 @@
 
 
         <h1>Pricing</h1>
+
         <div class="articles">
-     
-            <div class="service">
-                <h3>Grooming</h3>
-                <p><strong>Description:</strong> Professional grooming services to keep your pet looking their best. This includes bathing, brushing, and nail trimming.</p>
-                <p><strong>Pricing:</strong> $50 per session</p>
-                <p><strong>Benefits:</strong> Keeps your pet clean, reduces shedding, and prevents matting.</p>
-            </div>
-            <div class="service">
-                <h3>Training</h3>
-                <p><strong>Description:</strong> Comprehensive training programs to help your pet learn obedience and behavioral skills.</p>
-                <p><strong>Pricing:</strong> $100 for a 5-session package</p>
-                <p><strong>Benefits:</strong> Enhances your pet's behavior and strengthens your bond with them.</p>
-            </div>
-            <div class="service">
-                <h3>Veterinary Care</h3>
-                <p><strong>Description:</strong> Health check-ups and medical care provided by certified veterinarians.</p>
-                <p><strong>Pricing:</strong> $75 per consultation</p>
-                <p><strong>Benefits:</strong> Ensures your pet is healthy and up-to-date with vaccinations.</p>
-            </div>
+            <article>
+                <div class="service">
+                    <h3>Grooming</h3>
+                    <p><strong>Description:</strong> Professional grooming services to keep your pet looking their best. This includes bathing, brushing, and nail trimming.</p>
+                    <p><strong>Pricing:</strong> $50 per session</p>
+                    <p><strong>Benefits:</strong> Keeps your pet clean, reduces shedding, and prevents matting.</p>
+                </div>
+            </article>
 
-            <h2>Book an Appointment</h2>
-            <form id="booking-form" action="submit_booking.php" method="post">
-                <label for="service">Select Service:</label>
-                <select id="service" name="service">
-                    <option value="grooming">Grooming</option>
-                    <option value="training">Training</option>
-                    <option value="vet">Veterinary Care</option>
-                </select>
+            <article>
+                <div class="service">
+                    <h3>Training</h3>
+                    <p><strong>Description:</strong> Comprehensive training programs to help your pet learn obedience and behavioral skills.</p>
+                    <p><strong>Pricing:</strong> $100 for a 5-session package</p>
+                    <p><strong>Benefits:</strong> Enhances your pet's behavior and strengthens your bond with them.</p>
+                </div>
+            </article>
 
-                <label for="date">Choose Date:</label>
-                <input type="date" id="date" name="date" required>
+            <article>
+                <div class="service">
+                    <h3>Veterinary Care</h3>
+                    <p><strong>Description:</strong> Health check-ups and medical care provided by certified veterinarians.</p>
+                    <p><strong>Pricing:</strong> $75 per consultation</p>
+                    <p><strong>Benefits:</strong> Ensures your pet is healthy and up-to-date with vaccinations.</p>
+                </div>
+            </article>
 
-                <label for="time">Choose Time:</label>
-                <input type="time" id="time" name="time" required>
+            <article>
+                <h2>Book an Appointment</h2>
+                <form id="booking-form" action="submit_booking.php" method="post">
+                    <label for="service">Select Service:</label>
+                    <select id="service" name="service">
+                        <option value="grooming">Grooming</option>
+                        <option value="training">Training</option>
+                        <option value="vet">Veterinary Care</option>
+                    </select>
+    
+                    <label for="date">Choose Date:</label>
+                    <input type="date" id="date" name="date" required>
+    
+                    <label for="time">Choose Time:</label>
+                    <input type="time" id="time" name="time" required>
+    
+                    <input type="submit" value="Book Appointment">
+                </form>
+            </article>
+    
+        </article>
 
-                <input type="submit" value="Book Appointment">
-            </form>
-        </section>
     </main>
 
     <footer>
