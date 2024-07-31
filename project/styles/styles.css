@@ -195,6 +195,7 @@ article {
   padding: 1rem;
   border-radius: 5px;
   background-color: #f9f9f9; /* Light grey background for better contrast */
+  line-height: 1.5;
 }
 
 article h3 {
@@ -213,7 +214,6 @@ article img {
   margin: 0 auto;
   border-radius: 10px;
 }
-
 
 
 
