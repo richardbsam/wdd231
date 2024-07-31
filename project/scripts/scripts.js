@@ -1,5 +1,6 @@
 
 
+
 // Directory Page
 document.addEventListener('DOMContentLoaded', function() {
   const lastVisitKey = 'lastVisit';
@@ -250,6 +251,7 @@ async function fetchMembers() {
   
   // Function to toggle between grid and list view
   let isGridView = true;
+
   function toggleView() {
     const membersContainer = document.getElementById('membersContainer');
     if (isGridView) {
@@ -275,13 +277,12 @@ function displayMembers(members) {
       const memberCard = document.createElement('div');
       memberCard.classList.add('member-card');
 
-
       memberCard.innerHTML = `
           <img src="${member.image}" alt="${member.name}">
           <h3>${member.name}</h3>
           <p>${member.tagLine}</p><hr>
           <p><strong>Email:</strong> ${member.email}</p>
-          <p><strong>Phone:</strong> ${member.phone}</p>
+          <p><strong>Call:</strong> ${member.phone}</p>
           <a href="${member.website}" target="_blank">Website</a>
       `;
       container.appendChild(memberCard);
