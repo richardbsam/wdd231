@@ -101,8 +101,6 @@ nav {
   background-color: var(--nav-bg-color);
   position: absolute;
   top: 30px;
-  left: 0;
-  right: 0;
   width: 100%;
   z-index: 1005;
   margin: 1rem auto;

@@ -1,12 +1,12 @@
 [
     {
-      "name": "Tethys-Plantgeria Ltd",
+      "name": "Standard Parrot Bird",
       "tagLine": "Diving & Marine Contractors",
       "address": "Plot 303, Danjuma Drive, Trans Amadi Ind. Layout, Phase 2, Port Harcourt.",
       "email": "info@tethys-plantgeria.com",
       "phone": "+2348159913982",
       "website": "http://www.tethys-plantgeria.com",
-      "image": "images/tethys-logo.png",
+      "image": "images/photo6.jpg",
       "membershipLevel": 1,
       "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -17,7 +17,7 @@
       "email": "info@oromena.com",
       "phone": "+234-8063421371",
       "website": "https://oromena.com",
-      "image": "images/oromena-logo.png",
+      "image": "images/photo3.jpg",
       "membershipLevel": 2,
       "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },

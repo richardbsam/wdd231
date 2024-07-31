@@ -247,6 +247,7 @@ async function fetchMembers() {
   // Initial fetch and display
   fetchMembers();
 
+  
   // Function to toggle between grid and list view
   let isGridView = true;
   function toggleView() {
