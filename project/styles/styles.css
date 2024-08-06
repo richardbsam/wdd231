@@ -644,7 +644,7 @@ form input[type=submit]:hover {
   }
 
   .articles {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;  
   }
 
   article img {
